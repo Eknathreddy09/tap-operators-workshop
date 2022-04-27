@@ -1,0 +1,25 @@
+apiVersion: training.eduk8s.io/v1alpha2
+kind: Workshop
+metadata:
+  name: tap-workshop
+spec:
+  title: Partner Demo Workshop - TAP
+  description: Workshop created to demo TAP 1.1.0
+  vendor: eduk8s.io
+  difficulty: beginner
+  duration: 15m
+  url: https://github.com/Eknathreddy09/tap-demo
+  content:
+     files: github.com/Eknathreddy09/tap-demo?ref=main
+     image: 
+  session:
+    namespaces:
+      budget: small
+    applications:
+      terminal:
+        enabled: true
+        layout: split
+      console:
+        enabled: true
+      editor:
+        enabled: true
