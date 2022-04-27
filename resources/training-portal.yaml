@@ -1,0 +1,19 @@
+apiVersion: training.eduk8s.io/v1alpha1
+kind: TrainingPortal
+metadata:
+  name: partnerse
+spec:
+  portal:
+    ingress:
+      domain: workshop.captainvirtualization.in
+    registration:
+      type: anonymous
+    credentials:
+      admin:
+        username: admin
+        password: Welcome11!
+  workshops:
+  - name: tap-workshop
+    capacity: 25
+    expires: 300m
+    orphaned: 45m
