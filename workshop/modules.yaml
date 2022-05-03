@@ -1,0 +1,26 @@
+modules:
+    workshop-overview:
+        name: Contents Covered in Module 1
+        exit_sign: Next
+    setup-environment:
+        name: Workshop overview
+        exit_sign: Start Workshop
+    exercises/01-sample-content:
+        name: TKG workshop using Tanzu CLI
+    exercises/02-tmc:
+        name: TMC workshop using TMC CLI
+    exercises/03-tmc-packages:
+        name: TMC Package Install using console
+    exercises/04-delete-packages:
+        name: TMC Delete packages using console
+    exercises/05-cluster-upgrade:
+        name: TKG Cluster Upgrade using Tanzu CLI
+    exercises/06-cluster-delete:
+        name: Cluster Delete using Tanzu CLI
+    exercises/07-TMC-API:
+        name: TMC API Overview
+    exercises/08-TMC-Terraform: 
+        name: TMC Terraform Overview
+    workshop-summary:
+        name: Workshop Summary
+        exit_sign: Finish Workshop
