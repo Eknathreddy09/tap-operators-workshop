@@ -1,0 +1,15 @@
+name: Markdown Sample
+
+modules:
+    activate:
+    - workshop-overview
+    - setup-environment
+    - exercises/01-sample-content
+    - exercises/02-tmc
+    - exercises/03-tmc-packages
+    - exercises/04-delete-packages
+    - exercises/05-cluster-upgrade
+    - exercises/06-cluster-delete
+    - exercises/07-TMC-API
+    - exercises/08-TMC-Terraform
+    - workshop-summary
