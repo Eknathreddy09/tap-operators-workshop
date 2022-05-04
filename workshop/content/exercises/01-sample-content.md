@@ -114,6 +114,3 @@ line: 6
 file: ~/tap-values.yaml
 line: 40
 ```
-
-
-
