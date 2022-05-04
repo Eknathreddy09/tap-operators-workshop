@@ -42,11 +42,19 @@ az aks get-credentials --resource-group tap-partner-demo --name {{ session_names
 ```
 
 ```execute
+kubectl config get-contexts
+```
+
+```execute
 kubectl create ns tap-install
 ```
 
 ```copy-and-edit
 kubectl create secret docker-registry registry-credentials --docker-server=tappartnerdemoacr.azurecr.io --docker-username=tappartnerdemoacr --docker-password=<password> -n tap-install
+```
+```execute
+export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ab0a3539da241a6ea59c75c0743e9058511d7c56312ea3906178ec0f3491f51d
+export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
 ```
 
 ```execute
