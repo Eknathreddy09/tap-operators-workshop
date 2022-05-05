@@ -1,12 +1,6 @@
 
 ```dashboard:open-url
-url: http://tanzu-java-web-app.tap-install.captainvirtualization.in
-```
-
-Access AppLive view page directly: 
-
-```dashboard:open-url
-url: http://tanzu-java-web-app.tap-install.captainvirtualization.in/app-live-view
+url: https://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
 ```
 
 In Tap GUI, Naviate to Home > Your Organization > All > tanzu-java-web-app
@@ -28,3 +22,10 @@ Live view of application can be seen as shown below:
 Change the information Category to Memory, to view the memory stats if application. 
 
 ![Local host](images/Applive-4.png)
+
+
+Access AppLive view page directly: 
+
+```dashboard:open-url
+url: http://tanzu-java-web-app.tap-install.captainvirtualization.in/app-live-view
+```
