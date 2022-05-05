@@ -26,6 +26,12 @@ kubectl version
 export SESSION_NAME={{ session_namespace }}
 ```
 
+Login to github and fork the below repo, give the repository name as {{ session_namespace }}
+
+```dashboard:open-url
+https://github.com/Eknathreddy09/tanzu-java-web-app
+```
+
 ###### SE will provide the AZ Credentials, edit and execute in terminal
 
 ```copy-and-edit
@@ -123,6 +129,12 @@ line: 8
 ```editor:open-file
 file: ~/tap-values.yaml
 line: 40
+```
+Provide the Git account and repo name. Replace gitname with your account name and reponame with {{ session_namespace }}
+
+```editor:open-file
+file: ~/tap-values.yaml
+line: 44
 ```
 
 ```execute
