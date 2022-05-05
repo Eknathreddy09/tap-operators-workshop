@@ -28,6 +28,10 @@ tanzu insight config set-target https://$METADATA_STORE_DOMAIN:$METADATA_STORE_P
 ```
 
 ```execute
+tanzu insight health
+```
+
+```execute
 kubectl apply -f metadata-store.yaml
 ```
 
