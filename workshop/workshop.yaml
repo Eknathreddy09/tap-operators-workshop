@@ -6,4 +6,8 @@ modules:
     - setup-environment
     - exercises/01-sample-content
     - exercises/02-app-live
+    - exercises/03-supply-chain
+    - exercises/04-Accelerator
+    - exercises/05-Metastore
+    - exercises/06-liveupdate
     - workshop-summary
