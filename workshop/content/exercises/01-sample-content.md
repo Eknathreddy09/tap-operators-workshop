@@ -112,6 +112,16 @@ line: 6
 
 ```editor:open-file
 file: ~/tap-values.yaml
+line: 7
+```
+
+```editor:open-file
+file: ~/tap-values.yaml
+line: 8
+```
+
+```editor:open-file
+file: ~/tap-values.yaml
 line: 40
 ```
 
