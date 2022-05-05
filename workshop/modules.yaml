@@ -7,8 +7,21 @@ modules:
         exit_sign: Start Workshop
     exercises/01-sample-content:
         name: TAP Workshop
+        exit_sign: App Live
     exercises/02-app-live:
         name: Explore App Live in TAP-GUI
+        exit_sign: Supply chain
+    exercises/03-supply-chain:
+        name: Explore Supply Chain Choreographer
+        exit_sign: Accelerators
+    exercises/04-Accelerator:
+        name: Explore Accelerators
+        exit_sign: Metastore
+    exercises/05-Metastore:
+        name: Vulnerability Scanner
+        exit_sign: Live update
+    exercises/06-liveupdate:
+        name: Live update the application
     workshop-summary:
         name: Workshop Summary
         exit_sign: Finish Workshop
