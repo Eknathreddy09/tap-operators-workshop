@@ -143,7 +143,20 @@ tanzu package installed get tap -n tap-install
 tanzu apps cluster-supply-chain list
 ```
 
+
+```execute
+kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
+```
+![Local host](images/tap-svc-localhost-1.png)
+
 Tap-gui
+
+```dashboard:open-url
+url: https://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
+```
+
+![TAP GUI](images/tap-gui-1.png)
+
 
 ```execute
 kubectl apply -f $HOME/developer.yaml -n tap-install
@@ -169,6 +182,39 @@ sudo tanzu apps workload create tanzu-java-web-app  --git-repo https://github.co
 sudo tanzu apps workload get tanzu-java-web-app -n tap-install
 ```
 
-```execute
+```execute-2
 sudo tanzu apps workload tail tanzu-java-web-app --since 10m --timestamp -n tap-install
 ```
+
+```execute
+sudo tanzu apps workload list -n tap-install
+```
+
+```execute
+sudo tanzu apps workload get tanzu-java-web-app -n tap-install
+```
+
+![Local host](images/tap-workload-2.png)
+
+```execute
+kubectl get pods -n tap-install
+```
+
+```execute
+sudo tanzu apps workload get tanzu-java-web-app -n tap-install
+```
+
+![Local host](images/workload-create.png)
+
+```execute
+kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
+```
+map this ip to tanzu-java-web-app.tap-install.captainvirtualization.in in /etc/hosts
+
+![Local host](images/tap-workload-4.png)
+
+```dashboard:open-url
+url: http://tanzu-java-web-app.tap-install.captainvirtualization.in
+```
+
+![Local host](images/tap-workload-3.png)
