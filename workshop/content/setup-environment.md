@@ -13,6 +13,6 @@ Operations teams can create application scaffolding templates with built-in secu
 
 After the container is built, it updates every time there’s a new code commit or dependency patch. And connecting to other applications and data, regardless of how they’re built or what kind of infrastructure they run on, has never been easier, thanks to an internal API management portal.
 
-![Local host](images/tap-overview.png)
+![Local host](exercises/images/tap-overview.png)
 
 This workshop will give you an understanding of how development teams and operators will interact with the platform to enable iterative development cycles, and secure, automated delivery to production.
