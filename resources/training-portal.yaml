@@ -17,3 +17,7 @@ spec:
     capacity: 25
     expires: 300m
     orphaned: 45m
+  - name: tap-mc-workshop
+    capacity: 25
+    expires: 300m
+    orphaned: 45m
