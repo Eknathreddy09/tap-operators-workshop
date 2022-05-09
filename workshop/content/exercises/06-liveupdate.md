@@ -20,8 +20,10 @@ src/main/java/com/example/springboot/HelloController.java
 tanzu apps workload get tanzu-java-web-app -n tap-install
 ```
 
+<p style="color:blue"><strong> Access the updated application </strong></p>
 
-![Spring](images/spring.png)
+```dashboard:open-url
+url: http://tanzu-java-web-app.tap-install.captainvirtualization.in
+```
 
 ![Spring](images/liveup-1.png)
-
