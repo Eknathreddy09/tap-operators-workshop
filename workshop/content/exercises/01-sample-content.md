@@ -1,6 +1,3 @@
-```dashboard:open-url
-url: https://docs.vmware.com/en/VMware-Tanzu-Kubernetes-Grid/1.4/vmware-tanzu-kubernetes-grid-14/GUID-index.html
-```
 
 <p style="color:blue"><strong> Click here to test the execution in terminal</strong></p>
 
@@ -34,10 +31,6 @@ export SESSION_NAME={{ session_namespace }}
 
 ```dashboard:open-url
 url: https://github.com/Eknathreddy09/tanzu-java-web-app
-```
-
-```terminal:input
-dockerpassword: password
 ```
 
 ###### SE will provide the AZ Credentials, edit and execute in terminal
@@ -247,7 +240,7 @@ sudo tanzu package install grype-scanner --package-name grype.scanning.apps.tanz
 tanzu package installed list -A
 ```
 
-###### If all the packages are installed successfully, not its time to deploy an application on TAP. Provide the gitrepo that you have cloned in the beginning. 
+###### If all the packages are installed successfully, now its time to deploy an application on TAP. Provide the gitrepo that you have forked in the beginning. 
 
 
 ```copy-and-edit
