@@ -10,7 +10,7 @@ url: https://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
 
 ###### Runtime Resources > Resources > click on tanzu-java-web-app
 
-![Local host](images/Applive -1.png)
+![Local host](images/Applive-1.png)
 
 ###### Scroll down to the bottom and click on pod deployment
 
