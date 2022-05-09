@@ -33,7 +33,7 @@ export SESSION_NAME={{ session_namespace }}
 ###### Login to github and fork the below repo, give the repository name as {{ session_namespace }}
 
 ```dashboard:open-url
-url:https://github.com/Eknathreddy09/tanzu-java-web-app
+url: https://github.com/Eknathreddy09/tanzu-java-web-app
 ```
 
 ###### SE will provide the AZ Credentials, edit and execute in terminal
