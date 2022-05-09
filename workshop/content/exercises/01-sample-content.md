@@ -36,6 +36,10 @@ export SESSION_NAME={{ session_namespace }}
 url: https://github.com/Eknathreddy09/tanzu-java-web-app
 ```
 
+```terminal:input
+dockerpassword: password
+```
+
 ###### SE will provide the AZ Credentials, edit and execute in terminal
 
 ```copy-and-edit
