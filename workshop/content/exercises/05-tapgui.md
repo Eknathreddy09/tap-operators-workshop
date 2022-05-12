@@ -5,15 +5,15 @@ Organization catalog
 
 Tanzu Application Platform GUI plug-ins:
 
-  Runtime Resources Visibility
+    Runtime Resources Visibility
   
-  Application Live View
+    Application Live View
   
-  Application Accelerator
+    Application Accelerator
   
-  API Documentation
+    API Documentation
   
-  Supply Chain Choreographer
+    Supply Chain Choreographer
 
 TechDocs
 
