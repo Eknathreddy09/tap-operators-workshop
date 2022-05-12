@@ -1,3 +1,7 @@
+The Application Live View features of the Tanzu Application Platform include sophisticated components to give developers and operators a view into their running workloads on Kubernetes.
+
+Application Live View shows an individual running process
+
 <p style="color:blue"><strong> Connect to TAP GUI </strong></p>
 
 ```dashboard:open-url
