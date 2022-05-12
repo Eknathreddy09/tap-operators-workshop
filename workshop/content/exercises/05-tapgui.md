@@ -1,3 +1,9 @@
+<p style="color:blue"><strong> Verify the pods in tap-gui namespace </strong></p>
+
+```execute
+kubectl get pods -n tap-gui
+```
+
 <p style="color:blue"><strong> Collect the load balancer IP </strong></p>
 
 ```execute
@@ -17,4 +23,3 @@ url: https://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
 
 Example for ref: 
 ![TAP GUI](images/tap-gui-1.png)
-
