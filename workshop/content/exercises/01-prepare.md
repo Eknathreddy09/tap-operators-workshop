@@ -110,6 +110,10 @@ cd $HOME/tanzu-cluster-essentials
 kubectl get pods -n kapp-controller
 ```
 
+```execute
+kubectl get pods -n secretgen-controller
+```
+
 <p style="color:blue"><strong> Docker login to image repo </strong></p>
 
 ```execute
