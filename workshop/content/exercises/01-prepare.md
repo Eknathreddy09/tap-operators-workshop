@@ -163,38 +163,10 @@ file: ~/tap-values.yaml
 line: 8
 ```
 
-<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
+<p style="color:blue"><strong> Changes to tap values file" </strong></p>
 
-```editor:open-file
-file: ~/tap-values.yaml
-line: 4
-```
-<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
-
-```editor:open-file
-file: ~/tap-values.yaml
-line: 15
-```
-
-<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
-
-```editor:open-file
-file: ~/tap-values.yaml
-line: 23
-```
-
-<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
-
-```editor:open-file
-file: ~/tap-values.yaml
-line: 33
-```
-
-<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
-
-```editor:open-file
-file: ~/tap-values.yaml
-line: 36
+```execute
+sed -i -r "s/SESSION_NAME/$SESSION_NAME/g" $HOME/tap-values.yaml
 ```
 
 <p style="color:blue"><strong> Replace the text githubtoken with your actual github token </strong></p>
@@ -209,19 +181,6 @@ line: 40
 ```editor:open-file
 file: ~/tap-values.yaml
 line: 44
-```
-<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
-
-```editor:open-file
-file: ~/tap-values.yaml
-line: 46
-```
-
-<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
-
-```editor:open-file
-file: ~/tap-values.yaml
-line: 48
 ```
 
 Ref:
