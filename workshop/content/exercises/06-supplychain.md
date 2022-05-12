@@ -1,3 +1,10 @@
+
+<p style="color:blue"><strong> List the supply chain list </strong></p>
+
+```execute
+tanzu apps cluster-supply-chain list
+```
+
 <p style="color:blue"><strong> Connect to TAP GUI </strong></p>
 
 ```dashboard:open-url
