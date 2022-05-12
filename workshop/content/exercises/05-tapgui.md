@@ -2,12 +2,19 @@ Tanzu Application Platform GUI is a tool for your developers to view your applic
 Tanzu Application Platform GUI consists of the following components:
 
 Organization catalog
+
 Tanzu Application Platform GUI plug-ins:
+
   Runtime Resources Visibility
+  
   Application Live View
+  
   Application Accelerator
+  
   API Documentation
+  
   Supply Chain Choreographer
+
 TechDocs
 
 ###### In this section, lets see how to access TAP-GUI once installed with full profile. 
