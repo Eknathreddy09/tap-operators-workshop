@@ -4,6 +4,7 @@
 ```execute-1
 echo "Hello, Welcome to Partner workshop session"
 ```
+
 <p style="color:blue"><strong> Click here to check the Tanzu version</strong></p>
 
 ```execute
@@ -44,42 +45,50 @@ az login --service-principal -u <App ID> -p <Password> --tenant <Tenent ID>
 az account set --subscription <subscriptionid>
 ```
 
-<p style="color:blue"><strong> Provide ACR repo password. "This will be given by SE" </strong></p>
+###### Provide ACR repo password and execute
 
 ```copy-and-edit
 export DOCKER_REGISTRY_PASSWORD=<ACR Repo password>
 ```
 
+<p style="color:blue"><strong> Get credentials of cluster"{{ session_namespace }}-cluster" </strong></p>
+
 ```execute
 az aks get-credentials --resource-group tap-partner-demo --name {{ session_namespace }}-cluster
 ```
+
 <p style="color:blue"><strong> Check if the current context is set to "{{ session_namespace }}-cluster" </strong></p>
 
 ```execute
 kubectl config get-contexts
 ```
+
 <p style="color:blue"><strong> Create a namespace </strong></p>
 
 ```execute
 kubectl create ns tap-install
 ```
+
 <p style="color:blue"><strong> Create secret registry-credentials </strong></p>
 
-```copy-and-edit
+```execute
 kubectl create secret docker-registry registry-credentials --docker-server=tappartnerdemoacr.azurecr.io --docker-username=tappartnerdemoacr --docker-password=$DOCKER_REGISTRY_PASSWORD -n tap-install
 ```
+
 <p style="color:blue"><strong> Set environment variable </strong></p>
 
 ```execute
 export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ab0a3539da241a6ea59c75c0743e9058511d7c56312ea3906178ec0f3491f51d
 export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
 ```
-<p style="color:blue"><strong> Provide the Tanzu network username </strong></p>
+
+<p style="color:blue"><strong> Provide Tanzu network username and execute in terminal </strong></p>
 
 ```copy-and-edit
 export INSTALL_REGISTRY_USERNAME=<Tanzu Network Registry username>
 ```
-<p style="color:blue"><strong> Provide the Tanzu network password </strong></p>
+
+<p style="color:blue"><strong> Provide the Tanzu network password and execute in terminal </strong></p>
 
 ```copy-and-edit
 export INSTALL_REGISTRY_PASSWORD=<Tanzu Network password>
@@ -89,10 +98,16 @@ export INSTALL_REGISTRY_PASSWORD=<Tanzu Network password>
 cd $HOME/tanzu-cluster-essentials
 ```
 
-<p style="color:blue"><strong> Install  </strong></p>
+<p style="color:blue"><strong> Install cluster essesntials in {{ session_namespace }}-cluster  </strong></p>
 
 ```execute
 ./install.sh -y
+```
+
+<p style="color:blue"><strong> Verify the pods in kapp-controller namespace  </strong></p>
+
+```execute
+kubectl get pods -n kapp-controller
 ```
 
 <p style="color:blue"><strong> Docker login to image repo </strong></p>
@@ -109,7 +124,6 @@ docker login registry.tanzu.vmware.com -u $INSTALL_REGISTRY_USERNAME -p $INSTALL
 
 <p style="color:blue"><strong> Create tap-registry secret  </strong></p>
 
-
 ```execute
 sudo tanzu secret registry add tap-registry --username tappartnerdemoacr --password $DOCKER_REGISTRY_PASSWORD --server tappartnerdemoacr.azurecr.io --export-to-all-namespaces --yes --namespace tap-install
 ```
@@ -119,30 +133,35 @@ sudo tanzu secret registry add tap-registry --username tappartnerdemoacr --passw
 ```execute-1
 echo $DOCKER_REGISTRY_PASSWORD
 ```
+
 <p style="color:blue"><strong> Provide ACR repo password collected in previous step </strong></p>
 
 ```editor:open-file
 file: ~/tap-values.yaml
 line: 6
 ```
+
 <p style="color:blue"><strong> Provide your VMware Tanzu network username </strong></p>
 
 ```editor:open-file
 file: ~/tap-values.yaml
 line: 7
 ```
+
 <p style="color:blue"><strong> Provide your VMware Tanzu network password </strong></p>
 
 ```editor:open-file
 file: ~/tap-values.yaml
 line: 8
 ```
+
 <p style="color:blue"><strong> Provide your github token </strong></p>
 
 ```editor:open-file
 file: ~/tap-values.yaml
 line: 40
 ```
+
 <p style="color:blue"><strong> Provide the Git account and repo name. Replace gitname with your account name and reponame with {{ session_namespace }} </strong></p>
 
 ```editor:open-file
