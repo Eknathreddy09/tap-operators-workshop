@@ -190,7 +190,7 @@ file: ~/tap-values.yaml
 line: 36
 ```
 
-<p style="color:blue"><strong> Provide your github token </strong></p>
+<p style="color:blue"><strong> Replace the text githubtoken with your actual github token </strong></p>
 
 ```editor:open-file
 file: ~/tap-values.yaml
