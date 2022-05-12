@@ -132,31 +132,62 @@ docker login registry.tanzu.vmware.com -u $INSTALL_REGISTRY_USERNAME -p $INSTALL
 sudo tanzu secret registry add tap-registry --username tappartnerdemoacr --password $DOCKER_REGISTRY_PASSWORD --server tappartnerdemoacr.azurecr.io --export-to-all-namespaces --yes --namespace tap-install
 ```
 
-<p style="color:blue"><strong> Copy the output and same should be updated in tap-values </strong></p>
+<p style="color:blue"><strong> Copy the output and same will be updated in tap-values files </strong></p>
 
 ```execute-1
 echo $DOCKER_REGISTRY_PASSWORD
 ```
 
-<p style="color:blue"><strong> Provide ACR repo password collected in previous step </strong></p>
+<p style="color:blue"><strong> Provide ACR repo password collected in previous step and replace password </strong></p>
 
 ```editor:open-file
 file: ~/tap-values.yaml
 line: 6
 ```
 
-<p style="color:blue"><strong> Provide your VMware Tanzu network username </strong></p>
+Ref: 
+
+![Local host](images/values-3.png)
+
+<p style="color:blue"><strong> Replace tanzunetusername with your VMware Tanzu network username </strong></p>
 
 ```editor:open-file
 file: ~/tap-values.yaml
 line: 7
 ```
 
-<p style="color:blue"><strong> Provide your VMware Tanzu network password </strong></p>
+<p style="color:blue"><strong> Replace tanzunetpassword with your VMware Tanzu network password </strong></p>
 
 ```editor:open-file
 file: ~/tap-values.yaml
 line: 8
+```
+<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
+
+```editor:open-file
+file: ~/tap-values.yaml
+line: 15
+```
+
+<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
+
+```editor:open-file
+file: ~/tap-values.yaml
+line: 23
+```
+
+<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
+
+```editor:open-file
+file: ~/tap-values.yaml
+line: 33
+```
+
+<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
+
+```editor:open-file
+file: ~/tap-values.yaml
+line: 36
 ```
 
 <p style="color:blue"><strong> Provide your github token </strong></p>
@@ -172,3 +203,20 @@ line: 40
 file: ~/tap-values.yaml
 line: 44
 ```
+<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
+
+```editor:open-file
+file: ~/tap-values.yaml
+line: 46
+```
+
+<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
+
+```editor:open-file
+file: ~/tap-values.yaml
+line: 48
+```
+
+Ref:
+
+![Local host](images/values-4.png)
