@@ -54,7 +54,7 @@ export DOCKER_REGISTRY_PASSWORD=<ACR Repo password>
 <p style="color:blue"><strong> Get credentials of cluster"{{ session_namespace }}-cluster" </strong></p>
 
 ```execute
-az aks get-credentials --resource-group tap-partner-demo --name {{ session_namespace }}-cluster
+az aks get-credentials --resource-group tapdemo-cluster-RG --name {{ session_namespace }}-cluster
 ```
 
 <p style="color:blue"><strong> Check if the current context is set to "{{ session_namespace }}-cluster" </strong></p>
