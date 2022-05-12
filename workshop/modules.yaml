@@ -5,23 +5,39 @@ modules:
     setup-environment:
         name: Workshop overview
         exit_sign: Start Workshop
-    exercises/01-sample-content:
-        name: TAP Workshop
-        exit_sign: App Live
-    exercises/02-app-live:
-        name: Explore App Live in TAP-GUI
-        exit_sign: Supply chain
-    exercises/03-supply-chain:
-        name: Explore Supply Chain Choreographer
+    exercises/01-prepare:
+        name: Preparation to install TAP
+        exit_sign: Next
+    exercises/02-installtap:
+        name: Install TAP with full profile
+        exit_sign: Authentication
+    exercises/03-pinnipedauth:
+        name: Setup Authentication with pinniped
+        exit_sign: workload
+    exercises/04-workload:
+        name: Deploy workload
+        exit_sign: tapgui
+    exercises/05-tapgui:
+        name: TAP GUI – overview
+        exit_sign: supplychain
+    exercises/06-supplychain:
+        name: Explore Supplychain choreographers
+        exit_sign: AppLive
+    exercises/07-applive:
+        name: Explore application using applive view
         exit_sign: Accelerators
-    exercises/04-Accelerator:
-        name: Explore Accelerators
-        exit_sign: Metastore
-    exercises/05-Metastore:
-        name: Vulnerability Scanner
-        exit_sign: Live update
-    exercises/06-liveupdate:
-        name: Live update the application
+    exercises/08-accelerators:
+        name: Create an accelerator
+        exit_sign: update app
+    exercises/09-liveupdate:
+        name: Live update the deployed application
+        exit_sign: API
+    exercises/10-apiportal:
+        name: API Portal
+        exit_sign: metadata-store
+    exercises/11-metadatastore:
+        name: Explore Metadata store
+        exit_sign: Next
     workshop-summary:
         name: Workshop Summary
         exit_sign: Finish Workshop
