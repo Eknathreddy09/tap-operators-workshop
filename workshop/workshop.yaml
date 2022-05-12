@@ -4,10 +4,15 @@ modules:
     activate:
     - workshop-overview
     - setup-environment
-    - exercises/01-sample-content
-    - exercises/02-app-live
-    - exercises/03-supply-chain
-    - exercises/04-Accelerator
-    - exercises/05-Metastore
-    - exercises/06-liveupdate
+    - exercises/01-prepare
+    - exercises/02-installtap
+    - exercises/03-pinnipedauth
+    - exercises/04-workload
+    - exercises/05-tapgui
+    - exercises/06-supplychain
+    - exercises/07-applive
+    - exercises/08-accelerators
+    - exercises/09-liveupdate
+    - exercises/10-apiportal
+    - exercises/11-metadatastore
     - workshop-summary
