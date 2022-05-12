@@ -1,3 +1,16 @@
+<p style="color:blue"><strong> Review below yaml files </strong></p>
+
+```execute
+cat $HOME/developer.yaml
+```
+
+```execute
+cat $HOME/tekton-pipeline.yaml
+```
+
+```execute
+cat $HOME/scanpolicy.yaml
+```
 
 <p style="color:blue"><strong> Setup developer namespace </strong></p>
 
@@ -33,7 +46,7 @@ tanzu package installed list -A
 
 
 ```copy-and-edit
-sudo tanzu apps workload create tanzu-java-web-app  --git-repo <replace me with your git repo path> --git-branch main --type web --label apps.tanzu.vmware.com/has-tests=true --label app.kubernetes.io/part-of=tanzu-java-web-app -n tap-install --yes
+sudo tanzu apps workload create tanzu-java-web-app  --git-repo <replace me with your git repo path to repo {{ session_namespace }}> --git-branch main --type web --label apps.tanzu.vmware.com/has-tests=true --label app.kubernetes.io/part-of=tanzu-java-web-app -n tap-install --yes
 ```
 
 <p style="color:blue"><strong> Get the status of deployed application </strong></p>
@@ -42,7 +55,7 @@ sudo tanzu apps workload create tanzu-java-web-app  --git-repo <replace me with 
 sudo tanzu apps workload get tanzu-java-web-app -n tap-install
 ```
 
-<p style="color:blue"><strong> Check the live progress </strong></p>
+<p style="color:blue"><strong> Check the live progress of application</strong></p>
 
 ```execute-2
 sudo tanzu apps workload tail tanzu-java-web-app --since 10m --timestamp -n tap-install
