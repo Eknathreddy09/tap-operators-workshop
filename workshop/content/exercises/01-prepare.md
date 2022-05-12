@@ -162,6 +162,13 @@ line: 7
 file: ~/tap-values.yaml
 line: 8
 ```
+
+<p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
+
+```editor:open-file
+file: ~/tap-values.yaml
+line: 4
+```
 <p style="color:blue"><strong> Replace $SESSION_NAME with "{{ session_namespace }}" </strong></p>
 
 ```editor:open-file
