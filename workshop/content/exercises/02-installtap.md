@@ -32,14 +32,16 @@ sudo tanzu package available list --namespace tap-install
 sudo tanzu package install tap -p tap.tanzu.vmware.com -v 1.1.0 --values-file $HOME/tap-values.yaml -n tap-install
 ```
 
+![Local host](images/tap-install-3.png)
+
 Note: This process takes about 5-10 mins to complete. If you see any reconcile errors, please let us know.
 
 <p style="color:blue"><strong> List the packages installed </strong></p>
 
 ```execute
-tanzu package installed list -A
+sudo tanzu package installed list -A
 ```
 
 <p style="color:red"><strong> Proceeed further only once all the packages are reconciled successfully </strong></p>
 
-image: expected
+![Local host](images/tap-install-4.png)
