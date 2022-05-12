@@ -45,6 +45,12 @@ url: http://tanzu-java-web-app.tap-install.captainvirtualization.in
 
 ![Local host](images/supply-1.png)
 
+There are two sections within this view:
+
+Graph view at the top, which shows all the configured CRDs used by this supply chain and any artifacts that are outputs of the supply chain’s execution
+
+Stage details view at the bottom, which shows source data for each part of the supply chain that you select in the graph view
+
 ###### click on various stages in supply chain to understand better
 
 ![Local host](images/supply-2.png)
