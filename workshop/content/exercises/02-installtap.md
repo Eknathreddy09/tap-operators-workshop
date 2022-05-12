@@ -10,11 +10,15 @@ cat $HOME/tap-values.yaml
 sudo tanzu package repository add tanzu-tap-repository --url tappartnerdemoacr.azurecr.io/tap-demo/tap-packages:1.1.0 --namespace tap-install
 ```
 
+![Local host](images/tap-install-1.png)
+
 <p style="color:blue"><strong> Get the status of the TAP package repository, and ensure the status updates to Reconcile succeeded </strong></p>
 
 ```execute
 sudo tanzu package repository get tanzu-tap-repository --namespace tap-install
 ```
+
+![Local host](images/tap-install-2.png)
 
 <p style="color:blue"><strong>  List the available packages </strong></p>
 
