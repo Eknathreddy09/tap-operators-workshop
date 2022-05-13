@@ -1,3 +1,8 @@
+Application Accelerator for VMware Tanzu helps you bootstrap developing and deploying your applications in a discoverable and repeatable way.
+
+Enterprise Architects author and publish accelerator projects that provide developers and operators with ready-made, enterprise-conformant code and configurations. You can then use Application Accelerator to create new projects based on those accelerator projects.
+
+The Application Accelerator user interface (UI) enables you to discover available accelerators, configure them, and generate new projects to download.
 
 <p style="color:blue"><strong> Connect to TAP GUI </strong></p>
 
@@ -24,11 +29,15 @@ Name: {{ session_namespace }}
 ![Spring](images/spring.png)
 
 ###### Extract the generated zip file and upload the content into a new repo. create a new repo with name as {{ session_namespace }}-acc
+
+
 ###### Add the accelearor.yaml file to the root folder of repo as shown below
 
 ```execute
 cat accelerator.yaml
 ```
+
+Optional: After you’ve downloaded the ZIP file, expand it and modify the code using any IDE. 
 
 ![Git repo](images/acc-3.png)
 
