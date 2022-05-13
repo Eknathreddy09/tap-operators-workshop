@@ -9,8 +9,8 @@ tanzu apps workload tail tanzu-java-web-app --since 10m --timestamp -n tap-insta
 
 ###### Change the text from "Greetings from Spring Boot + tanzu!" to anything like "Greetings from Spring Boot + Welcome to Partner demo" in below files of github repo
 
-src/test/java/com/example/springboot/HelloControllerTest.java 
-src/main/java/com/example/springboot/HelloController.java
+    src/test/java/com/example/springboot/HelloControllerTest.java 
+    src/main/java/com/example/springboot/HelloController.java
 
 ###### Check the logs in terminal-2
 
