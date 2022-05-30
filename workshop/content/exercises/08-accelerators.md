@@ -17,7 +17,7 @@ url: http://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
 <p style="color:blue"><strong> Access spring.io </strong></p>
 
 ```dashboard:open-url
-https://start.spring.io/
+url: https://start.spring.io/
 ```
 ###### Provide Artifact and Name as below, remaining leave as default
 
