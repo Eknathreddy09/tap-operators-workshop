@@ -40,7 +40,7 @@ Example for ref:
 <p style="color:blue"><strong> Access TAP GUI </strong></p>
 
 ```dashboard:open-url
-url: https://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
+url: http://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
 ```
 
 Example for ref: 
