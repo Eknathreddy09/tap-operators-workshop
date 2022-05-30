@@ -7,7 +7,7 @@ The Application Accelerator user interface (UI) enables you to discover availabl
 <p style="color:blue"><strong> Connect to TAP GUI </strong></p>
 
 ```dashboard:open-url
-url: https://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
+url: http://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
 ```
 
 ###### Click on Accelerators (+), to check the available accelerators
