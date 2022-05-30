@@ -38,7 +38,7 @@ kubectl get Pipeline -n tap-install
 <p style="color:blue"><strong> Connect to TAP GUI </strong></p>
 
 ```dashboard:open-url
-url: http://tanzu-java-web-app.tap-install.captainvirtualization.in
+url: http://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
 ```
 
 ###### In Tap GUI, navigate to Supply Chain > Workloads > click on workload tanzu-java-web-app
