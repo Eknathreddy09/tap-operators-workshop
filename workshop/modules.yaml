@@ -29,8 +29,8 @@ modules:
     exercises/08-accelerators:
         name: Create an accelerator
         exit_sign: update app
-    exercises/09-liveupdate:
-        name: Live update the deployed application
+    exercises/09-Test-scan:
+        name: Scan Test
         exit_sign: API
     exercises/10-apiportal:
         name: API Portal
