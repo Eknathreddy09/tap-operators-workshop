@@ -12,7 +12,7 @@ modules:
     - exercises/06-supplychain
     - exercises/07-applive
     - exercises/08-accelerators
-    - exercises/09-liveupdate
+    - exercises/09-Test-scan.md
     - exercises/10-apiportal
     - exercises/11-metadatastore
     - workshop-summary
