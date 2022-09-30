@@ -10,6 +10,7 @@ echo "Hello, Welcome to Partner workshop session"
 ```execute
 tanzu version
 ```
+
 <p style="color:blue"><strong> Click here to check the AZ version</strong></p>
 
 ```execute
@@ -39,6 +40,7 @@ url: https://github.com/Eknathreddy09/tanzu-java-web-app
 ```copy-and-edit
 az login --service-principal -u <App ID> -p <Password> --tenant <Tenent ID> 
 ```
+
 ###### SE will provide the Subscription ID, edit and execute in terminal
 
 ```copy-and-edit
@@ -75,24 +77,12 @@ kubectl config get-contexts
 kubectl create ns tap-install
 ```
 
-<p style="color:blue"><strong> Create tap-registry secret  </strong></p>
+<p style="color:blue"><strong> Set environment variable </strong></p>
 
 ```execute
-sudo tanzu secret registry add tap-registry --username tappartnerdemoacr --password $DOCKER_REGISTRY_PASSWORD --server tappartnerdemoacr.azurecr.io --export-to-all-namespaces --yes --namespace tap-install
+export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:e00f33b92d418f49b1af79f42cb13d6765f1c8c731f4528dfff8343af042dc3e
+export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
 ```
-
-#<p style="color:blue"><strong> Create secret registry-credentials </strong></p>
-
-#```execute
-#kubectl create secret docker-registry registry-credentials --docker-server=tappartnerdemoacr.azurecr.io --docker-username=tappartnerdemoacr --docker-#password=$DOCKER_REGISTRY_PASSWORD -n tap-install
-#```
-
-#<p style="color:blue"><strong> Set environment variable </strong></p>
-
-#```execute
-#export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-#bundle@sha256:ab0a3539da241a6ea59c75c0743e9058511d7c56312ea3906178ec0f3491f51d
-#export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
-#```
 
 #<p style="color:blue"><strong> Provide Tanzu network username and execute in terminal </strong></p>
 
@@ -116,6 +106,12 @@ cd $HOME/tanzu-cluster-essentials
 ./install.sh -y
 ```
 
+<p style="color:blue"><strong> Create tap-registry secret  </strong></p>
+
+```execute
+sudo tanzu secret registry add tap-registry --username tappartnerdemoacr --password $DOCKER_REGISTRY_PASSWORD --server tappartnerdemoacr.azurecr.io --export-to-all-namespaces --yes --namespace tap-install
+```
+
 <p style="color:blue"><strong> Verify the pods in kapp-controller namespace  </strong></p>
 
 ```execute
@@ -125,14 +121,6 @@ kubectl get pods -n kapp-controller
 ```execute
 kubectl get pods -n secretgen-controller
 ```
-
-#<p style="color:blue"><strong> docker login to VMware registry </strong></p>
-
-#```execute
-#docker login registry.tanzu.vmware.com -u $INSTALL_REGISTRY_USERNAME -p $INSTALL_REGISTRY_PASSWORD
-#```
-
-
 
 <p style="color:blue"><strong> Copy the output and same will be updated in tap-values files </strong></p>
 
