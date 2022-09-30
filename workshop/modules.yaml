@@ -32,11 +32,17 @@ modules:
     exercises/09-Test-scan:
         name: Scan Test
         exit_sign: API
-    exercises/10-apiportal:
-        name: API Portal
+    exercises/10-APIDocs:
+        name: API Docs
         exit_sign: metadata-store
     exercises/11-metadatastore:
         name: Explore Metadata store
+        exit_sign: Tech Docs
+    exercises/12-TechDocs:
+        name: Tech Docs
+        exit_sign: Cleanup
+    exercises/13-Cleanup:
+        name: Cleanup
         exit_sign: Next
     workshop-summary:
         name: Workshop Summary
