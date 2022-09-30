@@ -13,6 +13,8 @@ modules:
     - exercises/07-applive
     - exercises/08-accelerators
     - exercises/09-Test-scan
-    - exercises/10-apiportal
+    - exercises/10-APIDocs
     - exercises/11-metadatastore
+    - exercises/12-TechDocs
+    - exercises/13-Cleanup
     - workshop-summary
