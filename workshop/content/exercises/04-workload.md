@@ -30,12 +30,6 @@ kubectl apply -f $HOME/tekton-pipeline.yaml -n tap-install
 kubectl apply -f $HOME/scanpolicy.yaml -n tap-install
 ```
 
-<p style="color:blue"><strong> Install grype scanner package </strong></p>
-
-```execute
-sudo tanzu package install grype-scanner --package-name grype.scanning.apps.tanzu.vmware.com --version 1.0.0  --namespace tap-install -f $HOME/ootb-supply-chain-basic-values.yaml
-```
-
 <p style="color:blue"><strong> List the packages installed </strong></p>
 
 ```execute
