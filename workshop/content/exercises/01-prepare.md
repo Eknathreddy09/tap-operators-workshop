@@ -84,17 +84,17 @@ export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster
 export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
 ```
 
-#<p style="color:blue"><strong> Provide Tanzu network username and execute in terminal </strong></p>
+<p style="color:blue"><strong> Provide Tanzu network username and execute in terminal </strong></p>
 
-#```copy-and-edit
-#export INSTALL_REGISTRY_USERNAME=<Tanzu Network Registry username>
-#```
+```copy-and-edit
+export INSTALL_REGISTRY_USERNAME=<Tanzu Network Registry username>
+```
 
-#<p style="color:blue"><strong> Provide the Tanzu network password and execute in terminal </strong></p>
+<p style="color:blue"><strong> Provide the Tanzu network password and execute in terminal </strong></p>
 
-#```copy-and-edit
-#export INSTALL_REGISTRY_PASSWORD=<Tanzu Network password>
-#```
+```copy-and-edit
+export INSTALL_REGISTRY_PASSWORD=<Tanzu Network password>
+```
 
 ```execute
 cd $HOME/tanzu-cluster-essentials
