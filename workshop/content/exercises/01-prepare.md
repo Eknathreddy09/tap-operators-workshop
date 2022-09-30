@@ -122,35 +122,18 @@ kubectl get pods -n kapp-controller
 kubectl get pods -n secretgen-controller
 ```
 
-<p style="color:blue"><strong> Copy the output and same will be updated in tap-values files </strong></p>
+<p style="color:blue"><strong> This command highlights the current password set to the image repository, which will be replaced with correct one in next steps </strong></p>
 
-```execute-1
-echo $DOCKER_REGISTRY_PASSWORD
+```editor:select-matching-text
+file: ~/tap-values.yaml
+text: password-registry
 ```
 
-<p style="color:blue"><strong> Provide ACR repo password collected in previous step and replace password </strong></p>
+You can replace the selected text by typing in the code editor, or automatically apply a replacement string by clicking below:
 
-```editor:open-file
+```editor:replace-text-selection
 file: ~/tap-values.yaml
-line: 6
-```
-
-Ref: 
-
-![Local host](images/values-3.png)
-
-<p style="color:blue"><strong> Replace tanzunetusername with your VMware Tanzu network username </strong></p>
-
-```editor:open-file
-file: ~/tap-values.yaml
-line: 7
-```
-
-<p style="color:blue"><strong> Replace tanzunetpassword with your VMware Tanzu network password </strong></p>
-
-```editor:open-file
-file: ~/tap-values.yaml
-line: 8
+text: $DOCKER_REGISTRY_PASSWORD
 ```
 
 <p style="color:blue"><strong> Changes to tap values file" </strong></p>
@@ -163,14 +146,14 @@ sed -i -r "s/SESSION_NAME/$SESSION_NAME/g" $HOME/tap-values.yaml
 
 ```editor:open-file
 file: ~/tap-values.yaml
-line: 40
+line: 51
 ```
 
 <p style="color:blue"><strong> Provide the Git account and repo name. Replace gitname with your account name and reponame with {{ session_namespace }} </strong></p>
 
 ```editor:open-file
 file: ~/tap-values.yaml
-line: 44
+line: 55
 ```
 
 Ref:
