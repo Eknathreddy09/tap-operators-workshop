@@ -144,9 +144,9 @@ sed -i -r "s/SESSION_NAME/$SESSION_NAME/g" $HOME/tap-values.yaml
 
 <p style="color:blue"><strong> Replace the text githubtoken with your actual github token </strong></p>
 
-```editor:open-file
+```editor:select-matching-text
 file: ~/tap-values.yaml
-line: 51
+text: githubtoken
 ```
 
 <p style="color:blue"><strong> Provide the Git account and repo name. Replace gitname with your account name and reponame with {{ session_namespace }} </strong></p>
