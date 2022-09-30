@@ -33,7 +33,7 @@ kubectl apply -f $HOME/scanpolicy.yaml -n tap-install
 <p style="color:blue"><strong> List the packages installed </strong></p>
 
 ```execute
-tanzu package installed list -A
+sudo tanzu package installed list -A
 ```
 
 ###### If all the packages are installed successfully, now its time to deploy an application on TAP. Provide the gitrepo that you have forked in the beginning. 
@@ -96,7 +96,7 @@ kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer
 <p style="color:blue"><strong> Access the deployed application </strong></p>
 
 ```dashboard:open-url
-url: http://tanzu-java-web-app.tap-install.captainvirtualization.in
+url: http://tanzu-java-web-app.tap-install.{{ session_namespace }}.demo.tanzupartnerdemo.com
 ```
 
-![Local host](images/tap-workload-3.png)
+![Local host](images/workload-1.png)
