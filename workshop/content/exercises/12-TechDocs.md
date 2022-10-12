@@ -4,7 +4,7 @@ TechDocs is Spotify’s homegrown docs-like-code solution built directly into Ba
 
 
 ```dashboard:open-url
-url: https://tap-gui.workshop.tap.captainvirtualization.in/docs/default/component/tap-gui-component
+url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/docs
 ```
 
 ###### TechDocs plugin - VMware Docs
@@ -20,6 +20,50 @@ url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.2/tap/GUID-t
 ```dashboard:open-url
 url: https://backstage.io/docs/features/techdocs/architecture#recommended-deployment
 ```
+
+```execute
+node -v
+```
+
+```execute
+npm -v
+```
+
+```execute
+cd /home/eduk8s/tanzudocs/site-component && ls
+```
+
+###### Dont need to run this
+
+```execute
+#npx @techdocs/cli generate --source-dir /home/eduk8s/tanzudocs/blank  --output-dir /home/eduk8s/tanzudocs/site-component
+```
+
+```execute
+npx @techdocs/cli publish --publisher-type azureBlobStorage --storage-name {{ session_namespace }} --azureAccountName taptechdocsblob --azureAccountKey OCOHumPLlSDkwawWLPWd1BvBsV77Lib95Dh5xuiIFfBz4kwHSVPLnaeEVUIJQJolAYzvPa29/RYG+AStDcv2Gg== --entity default/Component/tap-gui-component --directory /home/eduk8s/tanzudocs/site-component
+```
+
+Expected output: 
+
+info: Creating Azure Blob Storage Container publisher for TechDocs
+info: Successfully uploaded all the generated files for Entity tap-gui-component. Total number of files: 128
+info: Successfully deleted stale files for Entity tap-gui-component. Total number of files: 0
+
+![TechDocs](images/TTechDocs-ref-2.png)
+
+###### Remove (#) from lines 53 - 61 of tap-values.yaml
+
+![TechDocs](images/TechDocs-ref-1.png)
+
+```execute
+sudo tanzu package installed update tap -f $HOME/tap-values.yaml -n tap-install
+```
+
+```dashboard:open-url
+url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/docs/default/component/tap-gui-component
+```
+
+![TechDocs](images/TechDocs-ref-3.png)
 
 ###### Supported providers
 
