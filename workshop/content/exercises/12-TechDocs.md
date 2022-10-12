@@ -49,7 +49,7 @@ info: Creating Azure Blob Storage Container publisher for TechDocs
 info: Successfully uploaded all the generated files for Entity tap-gui-component. Total number of files: 128
 info: Successfully deleted stale files for Entity tap-gui-component. Total number of files: 0
 
-![TechDocs](images/TTechDocs-ref-2.png)
+![TechDocs](images/TechDocs-ref-2.png)
 
 ###### Remove (#) from lines 53 - 61 of tap-values.yaml
 
