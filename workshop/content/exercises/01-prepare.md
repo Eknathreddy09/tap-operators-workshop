@@ -112,6 +112,10 @@ cd $HOME/tanzu-cluster-essentials
 sudo tanzu secret registry add tap-registry --username tappartnerdemoacr --password $DOCKER_REGISTRY_PASSWORD --server tappartnerdemoacr.azurecr.io --export-to-all-namespaces --yes --namespace tap-install
 ```
 
+```execute
+kubectl create secret docker-registry registry-credentials --docker-server=${INSTALL_REGISTRY_HOSTNAME} --docker-username=${INSTALL_REGISTRY_USERNAME} --docker-password=${INSTALL_REGISTRY_PASSWORD} -n tap-install
+```
+
 <p style="color:blue"><strong> Verify the pods in kapp-controller namespace  </strong></p>
 
 ```execute
