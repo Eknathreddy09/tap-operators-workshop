@@ -81,6 +81,10 @@ kubectl get pods -n tap-install
 sudo tanzu apps workload get tanzu-java-web-app -n tap-install
 ```
 
+```execute
+tanzu apps workload apply tanzu-java-web-app --annotation autoscaling.knative.dev/minScale=1 -n tap-install
+```
+
 ![Local host](images/workload-create.png)
 
 <p style="color:blue"><strong> Collect the load balancer IP </strong></p>
