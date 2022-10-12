@@ -31,7 +31,7 @@ kubectl get pods -n tap-gui
 kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
 
-###### Add an entry in local host /etc/hosts path pointing the above collected load balancer IP with tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
+###### Add an entry in local host /etc/hosts path pointing the above collected load balancer IP with tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com
 
 Example for ref: 
 
@@ -40,9 +40,29 @@ Example for ref:
 <p style="color:blue"><strong> Access TAP GUI </strong></p>
 
 ```dashboard:open-url
-url: http://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
+url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com
 ```
 
 Example for ref: 
 
 ![TAP GUI](images/tap-gui-1.png)
+
+Integrate Auth (Github) with TAP GUI: 
+
+Steps to create your own client ID, client secret in github: 
+
+Remove (#) from lines 46 - 52
+
+Replace provideyourclientid
+
+```editor:open-file
+file: ~/tap-values.yaml
+line: 51
+```
+
+Replace provideyourcliensecret
+
+```editor:open-file
+file: ~/tap-values.yaml
+line: 52
+```
