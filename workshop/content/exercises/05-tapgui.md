@@ -66,3 +66,13 @@ Replace provideyourcliensecret
 file: ~/tap-values.yaml
 line: 52
 ```
+
+```execute
+sudo tanzu package installed update tap -f $HOME/tap-values.yaml -n tap-install
+```
+
+```dashboard:open-url
+url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com
+```
+
+Authenticate to TAP GUI portal with your github credentials. 
