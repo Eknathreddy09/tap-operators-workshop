@@ -104,3 +104,34 @@ url: http://tanzu-java-web-app.tap-install.{{ session_namespace }}.demo.tanzupar
 ```
 
 ![Local host](images/workload-1.png)
+
+
+### Pre-build image: 
+
+```dashboard:open-url
+url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.2/tap/GUID-scc-pre-built-image.html
+```
+
+```execute
+sudo tanzu apps workload list -n tap-install
+```
+
+Note: Image is already created for this workshop and uploaded to ACR. 
+
+```execute
+tanzu apps workload create {{ session_namespace }}-fromimage --image tanzupartnerworkshop.azurecr.io/tap12/build-service/partnertapdemo-tap-install:latest --type web --app {{ session_namespace }}-fromimage -n tap-install
+```
+
+```execute
+sudo tanzu apps workload get {{ session_namespace }}-fromimage -n tap-install
+```
+
+```execute
+kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
+```
+
+```dashboard:open-url
+url: http://{{ session_namespace }}-fromimage.tap-install.tanzupartnerdemo.com
+```
+Image ref: 
+
