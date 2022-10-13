@@ -10,22 +10,19 @@ The API documentation plug-in is part of Tanzu Application Platform GUI.
 url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.2/tap/GUID-tap-gui-plugins-api-docs.html
 ```
 
+Access below tap-gui url and register an entity
+
 ```dashboard:open-url
-url: https://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/catalog/default/api/demo-api
+url: https://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/catalog
 ```
-
-https://github.com/Eknathreddy09/tap-demo/blob/main/catalog-info-apidocs.yaml
-
-Image ref 1 APIDOCS 1
 
 ![API Docs](images/APIDocs-1.png)
 
+    Repository url: https://github.com/Eknathreddy09/tap-demo/blob/main/catalog-info-apidocs.yaml
 
-Repository url: https://github.com/Eknathreddy09/tap-demo/blob/main/catalog-info-apidocs.yaml
+    Analyze
 
-Analyze
-
-Import
+    Import
 
 ![API Docs](images/APIDocs-2.png)
 
@@ -38,6 +35,23 @@ Change the filter to APIs as shown below:
 
 ![API Docs](images/APIDocs-3.png)
 
+Access the api to view the provider and consumer micro services: 
+
+```dashboard:open-url
+url: https://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/catalog/default/api/demo-api
+```
+
+Navigate to the API page by clicking APIs on the left-hand side navigation panel. The catalog changes and entries are visible for further inspection. If you select the system demo-app, the diagram appears as follows:
+
+```dashboard:open-url
+url: https://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/catalog/default/system/demo-app/diagram
+```
+
+By choosing the Definition tab on the top of the API page, you can see the definition of that API in human-readable and machine-readable format.
+
+```dashboard:open-url
+url: https://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/catalog/default/api/demo-api/definition
+```
 
 ##### Supported API Formats: 
 
@@ -48,4 +62,3 @@ AsyncAPI
 GraphQL
 
 Plain (to support any other format)
-
