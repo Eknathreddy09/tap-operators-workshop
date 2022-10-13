@@ -20,9 +20,6 @@ Image ref 1 APIDOCS 1
 
 ![API Docs](images/APIDocs-1.png)
 
-![API Docs](images/APIDocs-2.png)
-
-![API Docs](images/APIDocs-3.png)
 
 Repository url: https://github.com/Eknathreddy09/tap-demo/blob/main/catalog-info-apidocs.yaml
 
@@ -30,9 +27,17 @@ Analyze
 
 Import
 
+![API Docs](images/APIDocs-2.png)
+
+
 ```dashboard:open-url
 url: https://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/catalog
 ```
+
+Change the component to API as shown below: 
+
+![API Docs](images/APIDocs-3.png)
+
 
 ##### Supported API Formats: 
 
