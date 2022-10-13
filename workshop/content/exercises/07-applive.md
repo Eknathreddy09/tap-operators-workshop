@@ -33,3 +33,7 @@ url: https://tap-gui.{{ session_namespace }}.demo.tanzupartnetdemo.com
 ```dashboard:open-url
 url: https://tap-gui.{{ session_namespace }}.demo.tanzupartnetdemo.com/app-live-view
 ```
+
+refer: 
+
+https://docs.vmware.com/en/Application-Live-View-for-VMware-Tanzu/1.2/docs/GUID-product-features.html
