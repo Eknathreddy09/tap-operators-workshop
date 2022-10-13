@@ -5,7 +5,7 @@ Application Live View shows an individual running process
 <p style="color:blue"><strong> Connect to TAP GUI </strong></p>
 
 ```dashboard:open-url
-url: https://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
+url: https://tap-gui.{{ session_namespace }}.demo.tanzupartnetdemo.com
 ```
 
 ###### In Tap GUI, Naviate to Home > Your Organization > All > tanzu-java-web-app
@@ -31,5 +31,5 @@ url: https://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
 <p style="color:blue"><strong> Access AppLive view page directly: </strong></p>
 
 ```dashboard:open-url
-url: http://tanzu-java-web-app.tap-install.captainvirtualization.in/app-live-view
+url: https://tap-gui.{{ session_namespace }}.demo.tanzupartnetdemo.com/app-live-view
 ```
