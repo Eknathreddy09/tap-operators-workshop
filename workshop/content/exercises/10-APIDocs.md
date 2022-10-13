@@ -34,7 +34,7 @@ Import
 url: https://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/catalog
 ```
 
-Change the component to API as shown below: 
+Change the filter to APIs as shown below: 
 
 ![API Docs](images/APIDocs-3.png)
 
