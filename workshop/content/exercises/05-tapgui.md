@@ -51,6 +51,10 @@ Integrate Auth (Github) with TAP GUI:
 
 Steps to create your own client ID, client secret in github: 
 
+```dashboard:open-url
+url: https://tap-gui.workshop.tap.tanzupartnerdemo.com/docs/default/component/tap-gui-component/github-settings/
+```
+
 Remove (#) from lines 46 - 52
 
 Replace provideyourclientid
