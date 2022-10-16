@@ -80,7 +80,7 @@ kubectl create ns tap-install
 <p style="color:blue"><strong> Set environment variable </strong></p>
 
 ```execute
-export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:e00f33b92d418f49b1af79f42cb13d6765f1c8c731f4528dfff8343af042dc3e
+export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9
 export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
 ```
 
