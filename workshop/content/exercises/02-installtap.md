@@ -7,7 +7,7 @@ cat $HOME/tap-values.yaml
 <p style="color:blue"><strong> Add the package repository </strong></p>
 
 ```execute
-sudo tanzu package repository add tanzu-tap-repository --url tappartnerdemoacr.azurecr.io/tap-demo/tap-packages122:1.2.2 --namespace tap-install
+sudo tanzu package repository add tanzu-tap-repository --url tappartnerdemoacr.azurecr.io/tap1.3/tap-demo/tap-packages:1.3.0 --namespace tap-install
 ```
 
 ![Local host](images/tap-install-1.png)
@@ -29,7 +29,7 @@ sudo tanzu package available list --namespace tap-install
 <p style="color:blue"><strong> Install Tanzu package with full profile</strong></p>
 
 ```execute
-sudo tanzu package install tap -p tap.tanzu.vmware.com -v 1.2.2 --values-file $HOME/tap-values.yaml -n tap-install
+sudo tanzu package install tap -p tap.tanzu.vmware.com -v 1.3.0 --values-file $HOME/tap-values.yaml -n tap-install
 ```
 
 ![Local host](images/tap-install-3.png)
