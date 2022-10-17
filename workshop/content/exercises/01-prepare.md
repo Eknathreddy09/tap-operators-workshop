@@ -96,6 +96,10 @@ export INSTALL_REGISTRY_USERNAME=<Tanzu Network Registry username>
 export INSTALL_REGISTRY_PASSWORD=<Tanzu Network password>
 ```
 
+```copy-and-edit
+export GIT_HUB_TOKEN=< github token>
+```
+
 ```execute
 cd $HOME/tanzu-cluster-essentials
 ```
@@ -126,39 +130,24 @@ kubectl get pods -n kapp-controller
 kubectl get pods -n secretgen-controller
 ```
 
-<p style="color:blue"><strong> This command highlights the current password set to the image repository, which will be replaced with correct one in next steps </strong></p>
-
-```editor:select-matching-text
-file: ~/tap-values.yaml
-text: password-registry
-```
-
-You can replace the selected text by typing in the code editor, or automatically apply a replacement string by clicking below:
-
-```editor:replace-text-selection
-file: ~/tap-values.yaml
-text: $DOCKER_REGISTRY_PASSWORD
-```
-
 <p style="color:blue"><strong> Changes to tap values file" </strong></p>
+
+```execute
+sed -i -r "s/password-registry/$DOCKER_REGISTRY_PASSWORD/g" $HOME/tap-values.yaml
+```
 
 ```execute
 sed -i -r "s/SESSION_NAME/$SESSION_NAME/g" $HOME/tap-values.yaml
 ```
 
-<p style="color:blue"><strong> Replace the text githubtoken with your actual github token </strong></p>
-
-```editor:select-matching-text
-file: ~/tap-values.yaml
-text: githubtoken
+```execute
+sed -i -r "s/githubtoken/$GIT_HUB_TOKEN/g" $HOME/tap-values.yaml
+GIT_HUB_TOKEN
 ```
 
 <p style="color:blue"><strong> Provide the Git account and repo name. Replace gitname with your account name and reponame with {{ session_namespace }} </strong></p>
 
-```editor:open-file
-file: ~/tap-values.yaml
-line: 55
-```
+Note: Gitea token and url
 
 Ref:
 
