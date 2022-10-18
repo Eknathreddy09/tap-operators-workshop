@@ -3,7 +3,27 @@ Supply Chain Security Tools - Store saves software bills of materials (SBoMs) to
 <p style="color:blue"><strong> List version information for metadata store package  </strong></p>
 
 ```execute
-tanzu package available list metadata-store.apps.tanzu.vmware.com --namespace tap-install
+sudo tanzu package available list metadata-store.apps.tanzu.vmware.com --namespace tap-install
+```
+
+<p style="color:blue"><strong> To create a read-write service account, run the following </strong></p>
+
+```execute
+kubectl apply -f metadata-store.yaml
+```
+
+<p style="color:blue"><strong> retrieve the access token and store it in variable</strong></p>
+
+```execute
+export METADATA_STORE_ACCESS_TOKEN=$(kubectl get secrets -n metadata-store -o jsonpath="{.items[?(@.metadata.annotations['kubernetes\.io/service-account\.name']=='metadata-store-read-write-client')].data.token}" | base64 -d)
+```
+
+```execute
+sed -i -r "s/ACCESS-TOKEN/$METADATA_STORE_ACCESS_TOKEN/g" $HOME/tap-values.yaml
+```
+
+```execute
+sudo tanzu package installed update tap -f tap-values.yaml -n tap-install
 ```
 
 <p style="color:blue"><strong> Query the app-tls-cert to get the CA Certificate </strong></p>
@@ -15,53 +35,29 @@ kubectl get secret app-tls-cert -n metadata-store -o json | jq -r '.data."ca.crt
 <p style="color:blue"><strong> Find the external IP address of the metadata-store-app </strong></p>
 
 ```execute
-METADATA_STORE_IP=$(kubectl get service/metadata-store-app --namespace metadata-store -o jsonpath="{.status.loadBalancer.ingress[0].ip}")
-```
-
-<p style="color:blue"><strong> Find the port of the metadata-store-app </strong></p>
-
-```execute
-METADATA_STORE_PORT=$(kubectl get service/metadata-store-app --namespace metadata-store -o jsonpath="{.spec.ports[0].port}")
+ENVOY_IP=$(kubectl get svc envoy -n tanzu-system-ingress -o jsonpath="{.status.loadBalancer.ingress[0].ip}")
 ```
 
 ```execute
-METADATA_STORE_DOMAIN="metadata-store-app.metadata-store.svc.cluster.local"
+METADATA_STORE_DOMAIN="metadata-store.{{ session_namespace }}.demo.tanzupartnerdemo.com"
 ```
 
 <p style="color:blue"><strong> Create an entry into /etc/hosts </strong></p>
 
 ```execute
-echo "$METADATA_STORE_IP $METADATA_STORE_DOMAIN" | sudo tee -a /etc/hosts > /dev/null
+echo "$ENVOY_IP $METADATA_STORE_DOMAIN" | sudo tee -a /etc/hosts > /dev/null
 ```
 
 <p style="color:blue"><strong> Set the target endpoint </strong></p>
 
 ```execute
-tanzu insight config set-target https://$METADATA_STORE_DOMAIN:$METADATA_STORE_PORT --ca-cert insight-ca.crt
+tanzu insight config set-target https://$METADATA_STORE_DOMAIN --ca-cert insight-ca.crt
 ```
 
 <p style="color:blue"><strong> Check the health </strong></p>
 
 ```execute
 tanzu insight health
-```
-
-<p style="color:blue"><strong> To create a read-write service account, run the following </strong></p>
-
-```execute
-kubectl apply -f metadata-store.yaml
-```
-
-<p style="color:blue"><strong> To retrieve the read-write access token, run the following </strong></p>
-
-```execute
-kubectl get secret $(kubectl get sa -n metadata-store metadata-store-read-write-client -o json | jq -r '.secrets[0].name') -n metadata-store -o json | jq -r '.data.token' | base64 -d
-```
-
-<p style="color:blue"><strong> retrieve the access token and store it in variable</strong></p>
-
-```execute
-export METADATA_STORE_ACCESS_TOKEN=$(kubectl get secrets -n metadata-store -o jsonpath="{.items[?(@.metadata.annotations['kubernetes\.io/service-account\.name']=='metadata-store-read-write-client')].data.token}" | base64 -d)
 ```
 
 <p style="color:red"> Note: For this demo, we have already generated an image report in CycloneDX format using grype </p>
