@@ -134,7 +134,7 @@ The page includes the following feature:
 
    - Search by the bean name or its corresponding fields.
 
-![Local host](images/Live-10.png)
+![Local host](images/liveview-23.png)
 
 ##### Metrics Page
 
