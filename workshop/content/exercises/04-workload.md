@@ -126,6 +126,10 @@ tanzu apps workload create {{ session_namespace }}-fromimage --image tappartnerd
 sudo tanzu apps workload get {{ session_namespace }}-fromimage -n tap-install
 ```
 
+```execute-2
+tanzu apps workload tail {{ session_namespace }}-fromimage --namespace tap-install
+```
+
 ![Local host](images/fromimage-1.png)
 
 
@@ -146,4 +150,8 @@ url: http://{{ session_namespace }}-fromimage.tap-install.{{ session_namespace }
 ```
 
 ![Local host](images/fromimage-4.png)
+
+```terminal:interrupt
+session: 2
+```
 
