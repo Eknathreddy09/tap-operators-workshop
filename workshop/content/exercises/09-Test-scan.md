@@ -99,6 +99,16 @@ url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/supply-cha
 
 ref Image: ![Scanpolicy](images/scan-6.png)
 
+```execute
+kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
+```
+
+Add an entry in local host /etc/hosts path pointing the above collected *load balancer IP* with **partnertapdemo-testscanpolicy.tap-install.{{ session_namespace }}.demo.tanzupartnerdemo.com**
+
+ref Image: ![Scanpolicy](images/scan-7.png)
+
 ```dashboard:open-url
 url: http://partnertapdemo-testscanpolicy.tap-install.{{ session_namespace }}.demo.tanzupartnerdemo.com
 ```
+
+ref Image: ![Scanpolicy](images/scan-8.png)
