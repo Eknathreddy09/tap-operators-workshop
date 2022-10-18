@@ -36,11 +36,13 @@ kubectl apply -f $HOME/scanpolicy.yaml -n tap-install
 sudo tanzu package installed list -A
 ```
 
+![Installed Package](images/install-5.png)
+
 ###### If all the packages are installed successfully, now its time to deploy an application on TAP. Provide the gitrepo that you have forked in the beginning. 
 
 
 ```copy-and-edit
-sudo tanzu apps workload create {{ session_namespace }}  --git-repo https://github.com/Eknathreddy09/partnertapdemo-app --git-branch main --type web --label apps.tanzu.vmware.com/has-tests=true --label app.kubernetes.io/part-of=partnertapdemo -n tap-install --yes
+sudo tanzu apps workload create {{ session_namespace }}  --git-repo https://gitea-tapdemo.tap.tanzupartnerdemo.com/tapdemo-user/partnertapdemo --git-branch main --type web --label apps.tanzu.vmware.com/has-tests=true --label app.kubernetes.io/part-of=partnertapdemo -n tap-install --yes
 ```
 
 <p style="color:blue"><strong> Get the status of deployed application </strong></p>
@@ -48,6 +50,8 @@ sudo tanzu apps workload create {{ session_namespace }}  --git-repo https://gith
 ```execute
 sudo tanzu apps workload get {{ session_namespace }} -n tap-install
 ```
+
+![Workload](images/workload-1.png)
 
 <p style="color:blue"><strong> Check the live progress of application</strong></p>
 
@@ -61,14 +65,6 @@ sudo tanzu apps workload tail {{ session_namespace }} --since 10m --timestamp -n
 sudo tanzu apps workload list -n tap-install
 ```
 
-<p style="color:blue"><strong> Get the status of deployed application, status should be ready with an url as shown in screenshot below </strong></p>
-
-```execute
-sudo tanzu apps workload get {{ session_namespace }} -n tap-install
-```
-
-![Local host](images/tap-workload-2.png)
-
 <p style="color:blue"><strong> Get the pods in tap-install namespace </strong></p>
 
 ```execute
@@ -81,11 +77,15 @@ kubectl get pods -n tap-install
 sudo tanzu apps workload get {{ session_namespace }} -n tap-install
 ```
 
+![Local host](images/workload-2.png)
+
 ```execute
-tanzu apps workload apply {{ session_namespace }} --annotation autoscaling.knative.dev/minScale=1 -n tap-install
+tanzu apps workload apply {{ session_namespace }} --annotation autoscaling.knative.dev/minScale=1 -n tap-install -y
 ```
 
-![Local host](images/workload-create.png)
+```execute-2
+ctrl-c
+```
 
 <p style="color:blue"><strong> Collect the load balancer IP </strong></p>
 
@@ -93,23 +93,23 @@ tanzu apps workload apply {{ session_namespace }} --annotation autoscaling.knati
 kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
 
-###### Add an entry in local host /etc/hosts path pointing the above collected load balancer IP with tanzu-java-web-app.tap-install.captainvirtualization.in
+###### Add an entry in local host /etc/hosts path pointing the above collected load balancer IP with {{ session_namespace }}.tap-install.{{ session_namespace }}.demo.tanzupartnerdemo.com
 
 ![Local host](images/tap-workload-4.png)
 
 <p style="color:blue"><strong> Access the deployed application </strong></p>
 
 ```dashboard:open-url
-url: http://tanzu-java-web-app.tap-install.{{ session_namespace }}.demo.tanzupartnerdemo.com
+url: http://{{ session_namespace }}.tap-install.{{ session_namespace }}.demo.tanzupartnerdemo.com
 ```
 
-![Local host](images/workload-1.png)
+![Local host](images/workload-3.png)
 
 
 ### Pre-build image: 
 
 ```dashboard:open-url
-url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.2/tap/GUID-scc-pre-built-image.html
+url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-scc-pre-built-image.html
 ```
 
 ```execute
@@ -119,19 +119,31 @@ sudo tanzu apps workload list -n tap-install
 Note: Image is already created for this workshop and uploaded to ACR. 
 
 ```execute
-tanzu apps workload create {{ session_namespace }}-fromimage --image tanzupartnerworkshop.azurecr.io/tap12/build-service/partnertapdemo-tap-install:latest --type web --app {{ session_namespace }}-fromimage -n tap-install
+tanzu apps workload create {{ session_namespace }}-fromimage --image tappartnerdemoacr.azurecr.io/tap13/workshopimage/partnertapdemo-tap-install:latest --type web --app {{ session_namespace }}-fromimage -n tap-install -y
 ```
 
 ```execute
 sudo tanzu apps workload get {{ session_namespace }}-fromimage -n tap-install
 ```
 
+![Local host](images/fromimage-1.png)
+
+
 ```execute
 kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
 
+![Local host](images/fromimage-2.png)
+
+###### Add an entry in local host /etc/hosts path pointing the above collected load balancer IP with {{ session_namespace }}-fromimage.tap-install.{{ session_namespace }}.demo.tanzupartnerdemo.com
+
+![Local host](images/fromimage-3.png)
+
+<p style="color:blue"><strong> Access the deployed application </strong></p>
+
 ```dashboard:open-url
-url: http://{{ session_namespace }}-fromimage.tap-install.tanzupartnerdemo.com
+url: http://{{ session_namespace }}-fromimage.tap-install.{{ session_namespace }}.demo.tanzupartnerdemo.com
 ```
-Image ref: 
+
+![Local host](images/fromimage-4.png)
 
