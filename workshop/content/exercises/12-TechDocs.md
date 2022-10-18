@@ -53,7 +53,7 @@ info: Successfully deleted stale files for Entity tap-gui-component. Total numbe
 
 ###### Remove (#) from lines 58 - 66 of tap-values.yaml
 
-![TechDocs](images/TechDocs-ref-1.png)
+![TechDocs](images/techdocs-19.png)
 
 ```execute
 sudo tanzu package installed update tap -f $HOME/tap-values.yaml -n tap-install
