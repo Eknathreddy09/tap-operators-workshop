@@ -83,8 +83,8 @@ sudo tanzu apps workload get {{ session_namespace }} -n tap-install
 tanzu apps workload apply {{ session_namespace }} --annotation autoscaling.knative.dev/minScale=1 -n tap-install -y
 ```
 
-```execute-2
-ctrl-c
+```terminal:interrupt
+session: 2
 ```
 
 <p style="color:blue"><strong> Collect the load balancer IP </strong></p>
