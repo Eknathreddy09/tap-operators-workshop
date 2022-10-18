@@ -81,7 +81,7 @@ kubectl create ns tap-install
 
 <p style="color:blue"><strong> Set environment variable </strong></p>
 
-![Cluster Context](images/prepare-2.png)
+![Env](images/prepare-2.png)
 
 ```execute
 export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9
@@ -110,15 +110,21 @@ cd $HOME/tanzu-cluster-essentials
 ./install.sh -y
 ```
 
+![Cluster Essentials](images/prepare-3.png)
+
 <p style="color:blue"><strong> Create tap-registry secret  </strong></p>
 
 ```execute
 sudo tanzu secret registry add tap-registry --username tappartnerdemoacr --password $DOCKER_REGISTRY_PASSWORD --server tappartnerdemoacr.azurecr.io --export-to-all-namespaces --yes --namespace tap-install
 ```
 
+![Secret Tap Registry](images/prepare-4.png)
+
 ```execute
 kubectl create secret docker-registry registry-credentials --docker-server=${INSTALL_REGISTRY_HOSTNAME} --docker-username=${INSTALL_REGISTRY_USERNAME} --docker-password=${INSTALL_REGISTRY_PASSWORD} -n tap-install
 ```
+
+![Secret Registry Credentials](images/prepare-5.png)
 
 <p style="color:blue"><strong> Verify the pods in kapp-controller namespace  </strong></p>
 
