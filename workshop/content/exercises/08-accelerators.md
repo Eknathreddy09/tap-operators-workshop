@@ -11,7 +11,7 @@ Fortunately, Tanzu Application Platform provides an easy way for Cody to browse 
 We're going to check out **Application Accelerator** by clicking on the link below. Be aware that it will open up a new browser tab, so you may need to switch back and forth between that one and this one to follow along in the instructions.
 
 ```dashboard:open-url
-url: https://tap-gui.{{ ENV_VIEW_CLUSTER_DOMAIN }}/create
+url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/create
 ```
 
 Now, Cody can discover a template that is appropriate for the programming language (e.g. Java, .NET, Node) and the application type (i.e. Web, message-driven, function) that he wants to work on. He can use the template to start a new project, or he can use the template to migrate a pre-existing application.
@@ -19,7 +19,7 @@ Now, Cody can discover a template that is appropriate for the programming langua
 ![Accelerator Templates](images/acc-templates.png)
 
 ```execute
-tanzu accelerator create {{ session_namespace }} --git-repository https://github.com/Eknathreddy09/partnertapdemo-app --git-branch main --display-name "$SESSION_NAME"
+tanzu accelerator create {{ session_namespace }} --git-repository https://gitea-tapdemo.tap.tanzupartnerdemo.com/tapdemo-user/partnertapdemo --git-branch main --display-name "$SESSION_NAME"
 ```
 
 ```execute
