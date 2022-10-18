@@ -51,7 +51,7 @@ Stage details view at the bottom, which shows source data for each part of the s
 
 ###### click on various stages in supply chain to understand better
 
-![Local host](images/supply-2.png)
+![Local host](images/sc-1.png)
 
 Each stage in the supply chain independently determines when its source inputs have changed, and whether it needs to take reconciliation steps to ensure that the application deployment is compliant.
 
