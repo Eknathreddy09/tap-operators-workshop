@@ -51,7 +51,7 @@ info: Successfully deleted stale files for Entity tap-gui-component. Total numbe
 
 ![TechDocs](images/TechDocs-ref-2.png)
 
-###### Remove (#) from lines 53 - 61 of tap-values.yaml
+###### Remove (#) from lines 58 - 66 of tap-values.yaml
 
 ![TechDocs](images/TechDocs-ref-1.png)
 
