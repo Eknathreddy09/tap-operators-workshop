@@ -35,7 +35,7 @@ kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer
 
 Example for ref: 
 
-![Local host](images/tap-svc-localhost-1.png)
+![Local host](images/gui-1.png)
 
 <p style="color:blue"><strong> Access TAP GUI </strong></p>
 
@@ -45,9 +45,9 @@ url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com
 
 Example for ref: 
 
-![TAP GUI](images/tap-gui-1.png)
+![TAP GUI](images/gui-2.png)
 
-Integrate Auth (Github) with TAP GUI: 
+##### Integrate Auth (Github) with TAP GUI: 
 
 Steps to create your own client ID, client secret in github: 
 
@@ -55,20 +55,22 @@ Steps to create your own client ID, client secret in github:
 url: https://tap-gui.workshop.tap.tanzupartnerdemo.com/docs/default/component/tap-gui-component/github-settings/
 ```
 
-Remove (#) from lines 46 - 52
+Remove (#) from lines 67 - 73
+
+![TAP GUI](images/gui-2.png)
 
 Replace provideyourclientid
 
 ```editor:open-file
 file: ~/tap-values.yaml
-line: 51
+line: 72
 ```
 
 Replace provideyourcliensecret
 
 ```editor:open-file
 file: ~/tap-values.yaml
-line: 52
+line: 73
 ```
 
 ```execute
