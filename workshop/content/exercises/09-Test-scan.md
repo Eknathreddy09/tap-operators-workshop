@@ -24,7 +24,7 @@ sudo tanzu apps workload create partnertapdemo-testscanpolicy  --git-repo https:
 ```
 
 ```execute
-tanzu apps workload apply partnertapdemo-testscanpolicy --annotation autoscaling.knative.dev/minScale=1 -n tap-install
+tanzu apps workload apply partnertapdemo-testscanpolicy --annotation autoscaling.knative.dev/minScale=1 -n tap-install -y
 ```
 
 ```execute
