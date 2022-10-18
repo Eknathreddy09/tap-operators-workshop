@@ -32,7 +32,7 @@ export SESSION_NAME={{ session_namespace }}
 ###### Login to github and fork the below repo, give the repository name as {{ session_namespace }}
 
 ```dashboard:open-url
-url: https://github.com/Eknathreddy09/tanzu-java-web-app
+url: https://gitea-tapdemo.tap.tanzupartnerdemo.com/tapdemo-user/tanzu-java-web-app
 ```
 
 ###### SE will provide the AZ Credentials, edit and execute in terminal
@@ -71,6 +71,8 @@ az aks get-credentials --resource-group tapdemo-cluster-RG --name {{ session_nam
 kubectl config get-contexts
 ```
 
+![Cluster Context](images/prepare-1.png)
+
 <p style="color:blue"><strong> Create a namespace </strong></p>
 
 ```execute
@@ -78,6 +80,8 @@ kubectl create ns tap-install
 ```
 
 <p style="color:blue"><strong> Set environment variable </strong></p>
+
+![Cluster Context](images/prepare-2.png)
 
 ```execute
 export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9
@@ -96,15 +100,11 @@ export INSTALL_REGISTRY_USERNAME=<Tanzu Network Registry username>
 export INSTALL_REGISTRY_PASSWORD=<Tanzu Network password>
 ```
 
-```copy-and-edit
-export GIT_HUB_TOKEN=< github token>
-```
-
 ```execute
 cd $HOME/tanzu-cluster-essentials
 ```
 
-<p style="color:blue"><strong> Install cluster essesntials in {{ session_namespace }}-cluster  </strong></p>
+<p style="color:blue"><strong> Install cluster essentials in {{ session_namespace }}-cluster  </strong></p>
 
 ```execute
 ./install.sh -y
@@ -139,16 +139,3 @@ sed -i -r "s/password-registry/$DOCKER_REGISTRY_PASSWORD/g" $HOME/tap-values.yam
 ```execute
 sed -i -r "s/SESSION_NAME/$SESSION_NAME/g" $HOME/tap-values.yaml
 ```
-
-```execute
-sed -i -r "s/githubtoken/$GIT_HUB_TOKEN/g" $HOME/tap-values.yaml
-GIT_HUB_TOKEN
-```
-
-<p style="color:blue"><strong> Provide the Git account and repo name. Replace gitname with your account name and reponame with {{ session_namespace }} </strong></p>
-
-Note: Gitea token and url
-
-Ref:
-
-
