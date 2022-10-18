@@ -35,7 +35,7 @@ kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer
 
 Example for ref: 
 
-![Local host](images/gui-1.png)
+![TAP GUI](images/gui-1.png)
 
 <p style="color:blue"><strong> Access TAP GUI </strong></p>
 
@@ -57,7 +57,7 @@ url: https://tap-gui.workshop.tap.tanzupartnerdemo.com/docs/default/component/ta
 
 Remove (#) from lines 67 - 73
 
-![TAP GUI](images/gui-2.png)
+![TAP GUI](images/gui-3.png)
 
 Replace provideyourclientid
 
@@ -82,3 +82,7 @@ url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com
 ```
 
 Authenticate to TAP GUI portal with your github credentials. 
+
+![TAP GUI](images/gui-4.png)
+
+![TAP GUI](images/gui-5.png)
