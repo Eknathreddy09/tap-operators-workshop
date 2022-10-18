@@ -1,10 +1,4 @@
-Cody is ready to start developing! He's not a deep expert on container infrastructure, but he's an absolute star in writing business applications using popular languages and frameworks.
-
-![Cody Languages](images/cody-languages.png)
-
-Cody wants a project template to get started. He'd like to download a curated template with all the components necessary to edit, build, and run the project. He doesn't want to own the responsibility of writing and maintaining the Dockerfiles, Kubernetes resources, and other infrastructure artifacts. That leaves him with less time to write application logic and deliver stories.
-
-Fortunately, Tanzu Application Platform provides an easy way for Cody to browse and consume templates that have been approved for use by his company. It's called **Application Accelerator**, and its hosted in the web interface for Tanzu Application Platform, also known as TAP GUI. 
+Tanzu Application Platform provides an easy way to browse and consume templates that have been approved for use by the organization. It's called **Application Accelerator**, and its hosted in the web interface for Tanzu Application Platform, also known as TAP GUI. 
 * Enterprise Architects use Application Accelerator to provide developers and operators in their organization with enterprise-compliant templates for code and configurations.
 * Developers use Application Accelerator to create or access projects which follow enterprise standards.
 
@@ -14,7 +8,7 @@ We're going to check out **Application Accelerator** by clicking on the link bel
 url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/create
 ```
 
-Now, Cody can discover a template that is appropriate for the programming language (e.g. Java, .NET, Node) and the application type (i.e. Web, message-driven, function) that he wants to work on. He can use the template to start a new project, or he can use the template to migrate a pre-existing application.
+Now, you can discover a template that is appropriate for the programming language (e.g. Java, .NET, Node) and the application type (i.e. Web, message-driven, function). You can use the template to start a new project, or use the template to migrate a pre-existing application.
 
 ![Accelerator Templates](images/acc-templates.png)
 
