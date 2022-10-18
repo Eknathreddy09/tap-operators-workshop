@@ -7,7 +7,7 @@ sudo tanzu apps workload list -n tap-install
 Edit scanpolicy
 
 ```editor:open-file
-file: $HOME/scanpolicy.yaml
+file: /home/eduk8s/scanpolicy.yaml
 line: 16
 ```
 
@@ -42,7 +42,7 @@ url: https://tap-gui.{{ session_namespace }}.demo.tanzupartnetdemo.com
 Add ignore CVE's to the list:
 
 ```editor:open-file
-file: $HOME/scanpolicy.yaml
+file: /home/eduk8s/scanpolicy.yaml
 line: 17
 ```
 
