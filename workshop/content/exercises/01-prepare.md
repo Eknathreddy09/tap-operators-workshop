@@ -29,7 +29,7 @@ kubectl version
 export SESSION_NAME={{ session_namespace }}
 ```
 
-###### Login to github and fork the below repo, give the repository name as {{ session_namespace }}
+###### Check the below repo for content: 
 
 ```dashboard:open-url
 url: https://gitea-tapdemo.tap.tanzupartnerdemo.com/tapdemo-user/tanzu-java-web-app
