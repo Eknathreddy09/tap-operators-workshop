@@ -16,7 +16,7 @@ TAP also includes Out of the Box Templates and Out of the Box Delivery Basic.
 
 ```editor:open-file
 file: ~/tap-values.yaml
-line: 12
+line: 14
 ```
 
 <p style="color:blue"><strong> List the supply chain list </strong></p>
@@ -40,12 +40,8 @@ kubectl get Pipeline -n tap-install
 <p style="color:blue"><strong> Connect to TAP GUI </strong></p>
 
 ```dashboard:open-url
-url: http://tap-gui.{{ session_namespace }}.demo.captainvirtualization.in
+url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/supply-chain/host/tap-install/{{ session_namespace }}
 ```
-
-###### In Tap GUI, navigate to Supply Chain > Workloads > click on workload tanzu-java-web-app
-
-![Local host](images/supply-1.png)
 
 There are two sections within this view:
 
@@ -112,5 +108,5 @@ The **Delivery** step of the supply chain apply the yaml file on a cluster. This
 For more detailed info reg supply chains, please refer to official vmware doc: 
 
 ```dashboard:open-url
-url: https://docs.vmware.com/en/Tanzu-Application-Platform/1.1/tap/GUID-scc-ootb-supply-chain-testing-scanning.html
+url: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.3/tap/GUID-scc-ootb-supply-chain-testing-scanning.html
 ```
