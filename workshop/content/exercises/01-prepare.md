@@ -121,7 +121,7 @@ sudo tanzu secret registry add tap-registry --username tappartnerdemoacr --passw
 ![Secret Tap Registry](images/prepare-4.png)
 
 ```execute
-kubectl create secret docker-registry registry-credentials --docker-server=${INSTALL_REGISTRY_HOSTNAME} --docker-username=${INSTALL_REGISTRY_USERNAME} --docker-password=${INSTALL_REGISTRY_PASSWORD} -n tap-install
+kubectl create secret docker-registry registry-credentials --docker-server=tappartnerdemoacr.azurecr.io --docker-username=tappartnerdemoacr --docker-password=$DOCKER_REGISTRY_PASSWORD -n tap-install
 ```
 
 ![Secret Registry Credentials](images/prepare-5.png)
