@@ -36,7 +36,7 @@ sudo tanzu package install tap -p tap.tanzu.vmware.com -v 1.3.0 --values-file $H
 
 Note: This process takes about 5-10 mins to complete. If you see any reconcile errors, please let us know.
 
-![Install](images/install-4.png)
+After successful installation: ![Install](images/install-4.png)
 
 <p style="color:blue"><strong> List the packages installed </strong></p>
 
