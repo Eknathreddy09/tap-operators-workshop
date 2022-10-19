@@ -1,6 +1,5 @@
 # Tanzu Application Platform Demonstration: 
 
-font italian 
 We recommend you use Chrome, Edge, or Firefox browsers in this workshop for the smoothest experience.
 
 VMware Tanzu Application Platform is a modular, application development platform that provides a rich set of developer tools and a paved path to production to build and deploy software quickly and securely on any compliant public cloud or on-premises Kubernetes cluster.
@@ -15,4 +14,4 @@ After the container is built, it updates every time there’s a new code commit 
 
 ![Local host](exercises/images/tap-overview.png)
 
-This workshop will give you an understanding of how development teams and operators will interact with the platform to enable iterative development cycles, and secure, automated delivery to production.
+This workshop will give you an understanding of how operators will interact with the platform to enable iterative development cycles, and secure, automated delivery to production.
