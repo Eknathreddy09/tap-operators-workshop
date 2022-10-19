@@ -15,7 +15,7 @@ kubectl apply -f ~/metadata-store.yaml
 <p style="color:blue"><strong> retrieve the access token and store it in variable</strong></p>
 
 ```execute
-export METADATA_STORE_ACCESS_TOKEN=$(kubectl get secrets -n metadata-store -o jsonpath="{.items[?(@.metadata.annotations['kubernetes\.io/service-account\.name']=='metadata-store-read-write-client')].data.token}" | base64 -d)
+export METADATA_STORE_ACCESS_TOKEN=$(kubectl get secrets metadata-store-read-write-client -n metadata-store -o jsonpath="{.data.token}" | base64 -d)
 ```
 
 ```execute
