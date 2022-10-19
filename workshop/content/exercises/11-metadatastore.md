@@ -9,7 +9,7 @@ sudo tanzu package available list metadata-store.apps.tanzu.vmware.com --namespa
 <p style="color:blue"><strong> To create a read-write service account, run the following </strong></p>
 
 ```execute
-kubectl apply -f metadata-store.yaml
+kubectl apply -f ~/metadata-store.yaml
 ```
 
 <p style="color:blue"><strong> retrieve the access token and store it in variable</strong></p>
