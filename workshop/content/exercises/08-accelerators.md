@@ -26,9 +26,9 @@ Application Accelerator now creates your project template, and gives you the opt
 
 ![Explore Template](images/acc-explore.png)
 
-If you drill down into the files in the Explore Project view, you will see that they mostly consist of source code files that Cody would use for a starter application, plus some generated files that will give Tanzu Application Platform additional context for working with the application. We will look close at those additional files in later sections. But now... let's start coding!
+If you drill down into the files in the Explore Project view, you will see that they mostly consist of source code files that you would use for a starter application, plus some generated files that will give Tanzu Application Platform additional context for working with the application. 
 
-As we are constantly trying to improve developer experience, in TAP 1.2, there is another way to consume accelerators and it is using your favourite editor e.g. VSCode. We provide a VSCode plugin that you can install & configure in seconds and start using accelerators. Once configured, you will get a separate tab for Tanzu as follows:-
+As we are constantly trying to improve developer experience, in TAP 1.3, there is another way to consume accelerators and it is using your favourite editor e.g. VSCode. We provide a VSCode plugin that you can install & configure in seconds and start using accelerators. Once configured, you will get a separate tab for Tanzu as follows:-
 
 ![Explore Accelerators](images/app-accelerators-in-vscode.png)
 
