@@ -1,17 +1,15 @@
-
+In this section, lets make some changes to the scanpolicy file and see how the application deployment goes through, how the errors can be fixed. 
 
 ```execute
 sudo tanzu apps workload list -n tap-install
 ```
 
-Edit scanpolicy
+Edit scanpolicy and Add "Critical" to notAllowedSeverities list: 
 
 ```editor:open-file
 file: /home/eduk8s/scanpolicy.yaml
 line: 16
 ```
-
-Add severities to the file: "Critical"
 
 ref Image: ![Scanpolicy](images/scanpolicy-1.png)
 
@@ -39,16 +37,16 @@ sudo tanzu apps workload tail partnertapdemo-testscanpolicy -n tap-install
 url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/supply-chain/host/tap-install/partnertapdemo-testscanpolicy
 ```
 
+After few mins, you notice the workload deployment do not progress and few errors can be under workload supply chain in TAP GUI as shown below: 
+
 ref Image: ![Scanpolicy](images/scan-1.png)
-
-Add ignore CVE's to the list:
-
-GHSA-36p3-wjmg-h94x
 
 ```editor:open-file
 file: /home/eduk8s/scanpolicy.yaml
 line: 17
 ```
+
+Add the CVE **GHSA-36p3-wjmg-h94x** to ignoreCves list as shown in below image: 
 
 ref Image: ![Scanpolicy](images/scan-2.png)
 
@@ -56,7 +54,7 @@ ref Image: ![Scanpolicy](images/scan-2.png)
 kubectl apply -f $HOME/scanpolicy.yaml -n tap-install
 ```
 
-Wait for 2 mins
+Soon after the scanpolicy is updated, you can see the deployment progressing in **Terminal-2**. Wait for a min and it will pause again
 
 ```execute
 sudo tanzu apps workload get partnertapdemo-testscanpolicy -n tap-install
@@ -68,9 +66,7 @@ url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/supply-cha
 
 ref Image: ![Scanpolicy](images/scan-3.png)
 
-Add ignore CVE's to the list:
-
-CVE-2022-22965
+Add the CVE **CVE-2022-22965** to ignoreCves list as shown in below image: 
 
 ```editor:open-file
 file: /home/eduk8s/scanpolicy.yaml
@@ -83,7 +79,7 @@ ref Image: ![Scanpolicy](images/scan-4.png)
 kubectl apply -f $HOME/scanpolicy.yaml -n tap-install
 ```
 
-After applying above policy, you can see the progress of application going through
+After updating the scanpolicy, you can see the progress of application going through
 
 ```execute
 sudo tanzu apps workload get partnertapdemo-testscanpolicy -n tap-install
