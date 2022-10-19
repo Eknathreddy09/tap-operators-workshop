@@ -111,7 +111,7 @@ To navigate to the Configuration Properties page, select the Configuration Prope
 
 The page includes the following feature:
 
-    - Look up a key-value for a property or bean name using the search feature.
+  - Look up a key-value for a property or bean name using the search feature.
 
 ![Local host](images/Live-8.png)
 
@@ -160,7 +160,3 @@ The page includes the following feature:
    - Choose from a list of actuator endpoints and parse through the raw actuator data.
 
 ![Local host](images/Live-12.png)
-
-refer: 
-
-https://docs.vmware.com/en/Application-Live-View-for-VMware-Tanzu/1.2/docs/GUID-product-features.html
