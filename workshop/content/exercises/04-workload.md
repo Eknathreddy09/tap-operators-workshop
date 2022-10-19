@@ -51,6 +51,8 @@ sudo tanzu apps workload create {{ session_namespace }}  --git-repo https://gite
 sudo tanzu apps workload get {{ session_namespace }} -n tap-install
 ```
 
+*Note:* Ignore below error, it is expected. 
+
 ![Workload](images/workload-1.png)
 
 <p style="color:blue"><strong> Check the live progress of application</strong></p>
@@ -77,7 +79,9 @@ kubectl get pods -n tap-install
 sudo tanzu apps workload get {{ session_namespace }} -n tap-install
 ```
 
-![Local host](images/workload-2.png)
+![Workload](images/workload-2.png)
+
+###### Apply Annotation
 
 ```execute
 tanzu apps workload apply {{ session_namespace }} --annotation autoscaling.knative.dev/minScale=1 -n tap-install -y
@@ -95,7 +99,7 @@ kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer
 
 ###### Add an entry in local host /etc/hosts path pointing the above collected load balancer IP with {{ session_namespace }}.tap-install.{{ session_namespace }}.demo.tanzupartnerdemo.com
 
-![Local host](images/tap-workload-4.png)
+![Workload](images/tap-workload-4.png)
 
 <p style="color:blue"><strong> Access the deployed application </strong></p>
 
@@ -103,7 +107,7 @@ kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer
 url: http://{{ session_namespace }}.tap-install.{{ session_namespace }}.demo.tanzupartnerdemo.com
 ```
 
-![Local host](images/workload-3.png)
+![Workload](images/workload-3.png)
 
 
 ### Pre-build image: 
@@ -130,18 +134,18 @@ sudo tanzu apps workload get {{ session_namespace }}-fromimage -n tap-install
 tanzu apps workload tail {{ session_namespace }}-fromimage --namespace tap-install
 ```
 
-![Local host](images/fromimage-1.png)
+![Workload from Image](images/fromimage-1.png)
 
 
 ```execute
 kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
 
-![Local host](images/fromimage-2.png)
+![Workload from Image](images/fromimage-2.png)
 
 ###### Add an entry in local host /etc/hosts path pointing the above collected load balancer IP with {{ session_namespace }}-fromimage.tap-install.{{ session_namespace }}.demo.tanzupartnerdemo.com
 
-![Local host](images/fromimage-3.png)
+![Workload from Image](images/fromimage-3.png)
 
 <p style="color:blue"><strong> Access the deployed application </strong></p>
 
@@ -149,7 +153,7 @@ kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer
 url: http://{{ session_namespace }}-fromimage.tap-install.{{ session_namespace }}.demo.tanzupartnerdemo.com
 ```
 
-![Local host](images/fromimage-4.png)
+![Workload from Image](images/fromimage-4.png)
 
 ```terminal:interrupt
 session: 2
