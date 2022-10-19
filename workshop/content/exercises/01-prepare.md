@@ -35,7 +35,7 @@ export SESSION_NAME={{ session_namespace }}
 url: https://gitea-tapdemo.tap.tanzupartnerdemo.com/tapdemo-user/tanzu-java-web-app
 ```
 
-###### SE will provide the AZ Credentials, subscriptionid
+###### SE will provide the AZ Credentials, subscriptionid and Docker Registry Password
 
 *Note:* Just click on below command and paste in terminal 1, provide  <App ID>, <Password>, <Tenent ID> and press *ENTER* 
 
@@ -55,16 +55,16 @@ az account set --subscription <subscriptionid>
 export DOCKER_REGISTRY_PASSWORD=<ACR Repo password>
 ```
 
-<p style="color:blue"><strong> Docker login to image repo </strong></p>
-
-```execute
-docker login tappartnerdemoacr.azurecr.io -u tappartnerdemoacr -p $DOCKER_REGISTRY_PASSWORD
-```
-
 <p style="color:blue"><strong> Get credentials of cluster"{{ session_namespace }}-cluster" </strong></p>
 
 ```execute
 az aks get-credentials --resource-group tapdemo-cluster-RG --name {{ session_namespace }}-cluster
+```
+  
+<p style="color:blue"><strong> Docker login to image repo </strong></p>
+
+```execute
+docker login tappartnerdemoacr.azurecr.io -u tappartnerdemoacr -p $DOCKER_REGISTRY_PASSWORD
 ```
 
 <p style="color:blue"><strong> Check if the current context is set to "{{ session_namespace }}-cluster" </strong></p>
@@ -91,12 +91,16 @@ export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
 ```
 
 <p style="color:blue"><strong> Provide Tanzu network username and execute in terminal </strong></p>
+  
+*Note:* Just click on below command and paste in terminal 1, provide your <Tanzu Network Registry username> and press *ENTER* 
 
 ```copy-and-edit
 export INSTALL_REGISTRY_USERNAME=<Tanzu Network Registry username>
 ```
 
 <p style="color:blue"><strong> Provide the Tanzu network password and execute in terminal </strong></p>
+  
+*Note:* Just click on below command and paste in terminal 1, provide your <Tanzu Network password> and press *ENTER* 
 
 ```copy-and-edit
 export INSTALL_REGISTRY_PASSWORD=<Tanzu Network password>
@@ -114,7 +118,7 @@ cd $HOME/tanzu-cluster-essentials
 
 ![Cluster Essentials](images/prepare-3.png)
 
-<p style="color:blue"><strong> Create tap-registry secret  </strong></p>
+<p style="color:blue"><strong> Create tap-registry secret </strong></p>
 
 ```execute
 sudo tanzu secret registry add tap-registry --username tappartnerdemoacr --password $DOCKER_REGISTRY_PASSWORD --server tappartnerdemoacr.azurecr.io --export-to-all-namespaces --yes --namespace tap-install
@@ -128,7 +132,7 @@ kubectl create secret docker-registry registry-credentials --docker-server=tappa
 
 ![Secret Registry Credentials](images/prepare-5.png)
 
-<p style="color:blue"><strong> Verify the pods in kapp-controller namespace  </strong></p>
+<p style="color:blue"><strong> Verify the pods in kapp-controller namespace  and secretgen-controller </strong></p>
 
 ```execute
 kubectl get pods -n kapp-controller
