@@ -4,7 +4,7 @@ TechDocs is Spotify’s homegrown docs-like-code solution built directly into Ba
 
 
 ```dashboard:open-url
-url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/docs
+url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/docs/default/component/tap-gui-component
 ```
 
 ###### TechDocs plugin - VMware Docs
