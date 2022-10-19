@@ -18,11 +18,11 @@ url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com/catalog
 
 ![API Docs](images/APIDocs-1.png)
 
-    - Repository url: https://gitea-tapdemo.tap.tanzupartnerdemo.com/tapdemo-user/partnertapdemo/raw/branch/main/catalog-info-apidocs.yaml
+ - Repository url: https://gitea-tapdemo.tap.tanzupartnerdemo.com/tapdemo-user/partnertapdemo/raw/branch/main/catalog-info-apidocs.yaml
 
-    - Analyze
+ - Analyze
 
-    - Import
+ - Import
 
 ![API Docs](images/apidocs-11.png)
 
