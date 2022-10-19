@@ -29,19 +29,21 @@ kubectl version
 export SESSION_NAME={{ session_namespace }}
 ```
 
-###### Check the below repo for content: 
+###### Check below repo to view the workload content: 
 
 ```dashboard:open-url
 url: https://gitea-tapdemo.tap.tanzupartnerdemo.com/tapdemo-user/tanzu-java-web-app
 ```
 
-###### SE will provide the AZ Credentials, edit and execute in terminal
+###### SE will provide the AZ Credentials, subscriptionid
+
+*Note:* Just click on below command and paste in terminal 1, provide  <App ID>, <Password>, <Tenent ID> and press *ENTER* 
 
 ```copy-and-edit
 az login --service-principal -u <App ID> -p <Password> --tenant <Tenent ID> 
 ```
-
-###### SE will provide the Subscription ID, edit and execute in terminal
+  
+*Note:* Just click on below command and paste in terminal 1, provide <subscriptionid> and press *ENTER* 
 
 ```copy-and-edit
 az account set --subscription <subscriptionid>
