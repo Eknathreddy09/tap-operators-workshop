@@ -137,6 +137,8 @@ tanzu apps workload tail {{ session_namespace }}-fromimage --namespace tap-insta
 ![Workload from Image](images/fromimage-1.png)
 
 
+<p style="color:blue"><strong> Collect the load balancer IP </strong></p>
+
 ```execute
 kubectl get svc envoy -n tanzu-system-ingress -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
