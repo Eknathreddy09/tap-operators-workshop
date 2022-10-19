@@ -39,8 +39,10 @@ cd /home/eduk8s/tanzudocs/site-component && ls
 #npx @techdocs/cli generate --source-dir /home/eduk8s/tanzudocs/blank  --output-dir /home/eduk8s/tanzudocs/site-component
 ```
 
+**Note:** For this workshop, we have already generated the required files into: **/home/eduk8s/tanzudocs/site-component**
+
 ```execute
-#npx @techdocs/cli publish --publisher-type azureBlobStorage --storage-name {{ session_namespace }} --azureAccountName taptechdocsblob --azureAccountKey OCOHumPLlSDkwawWLPWd1BvBsV77Lib95Dh5xuiIFfBz4kwHSVPLnaeEVUIJQJolAYzvPa29/RYG+AStDcv2Gg== --entity default/Component/tap-gui-component --directory /home/eduk8s/tanzudocs/site-component
+npx @techdocs/cli publish --publisher-type azureBlobStorage --storage-name {{ session_namespace }} --azureAccountName taptechdocsblob --azureAccountKey OCOHumPLlSDkwawWLPWd1BvBsV77Lib95Dh5xuiIFfBz4kwHSVPLnaeEVUIJQJolAYzvPa29/RYG+AStDcv2Gg== --entity default/Component/tap-gui-component --directory /home/eduk8s/tanzudocs/site-component
 ```
 
 Expected output: 
@@ -48,8 +50,6 @@ Expected output:
 info: Creating Azure Blob Storage Container publisher for TechDocs
 info: Successfully uploaded all the generated files for Entity tap-gui-component. Total number of files: 128
 info: Successfully deleted stale files for Entity tap-gui-component. Total number of files: 0
-
-**Note:** For this workshop, we have already pushed the required files into Azure Blob 
 
 ![TechDocs](images/TechDocs-ref-2.png)
 
