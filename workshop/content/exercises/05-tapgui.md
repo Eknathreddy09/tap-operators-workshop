@@ -47,39 +47,47 @@ Example for ref:
 
 ##### Integrate Auth (Github) with TAP GUI: 
 
-Steps to create your own client ID, client secret in github: 
+*Note:* Steps to create your own *client ID*, *client secret* in github are given in below TechDocs page: 
 
 ```dashboard:open-url
 url: https://tap-gui.workshop.tap.tanzupartnerdemo.com/docs/default/component/tap-gui-component/github-settings/
 ```
 
-Remove (#) from lines 67 - 73
+###### Remove (#) from lines 67 - 73
+
+```editor:open-file
+file: ~/tap-values.yaml
+```
 
 ![TAP GUI](images/gui-3.png)
 
-Replace provideyourclientid
+Replace provideyourclientid with your Github client ID. 
 
 ```editor:open-file
 file: ~/tap-values.yaml
 line: 72
 ```
 
-Replace provideyourcliensecret
+Replace provideyourcliensecret with your Github client Secret. 
 
 ```editor:open-file
 file: ~/tap-values.yaml
 line: 73
 ```
 
+###### Update TAP packages with updated values: 
+
 ```execute
 sudo tanzu package installed update tap -f $HOME/tap-values.yaml -n tap-install
 ```
+
+###### Access the TAP GUI, open in incognito window or a different browser. 
 
 ```dashboard:open-url
 url: http://tap-gui.{{ session_namespace }}.demo.tanzupartnerdemo.com
 ```
 
-Authenticate to TAP GUI portal with your github credentials. 
+###### Authenticate to TAP GUI portal with your github credentials. 
 
 ![TAP GUI](images/gui-4.png)
 
