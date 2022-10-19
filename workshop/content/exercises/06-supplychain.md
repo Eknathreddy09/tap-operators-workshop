@@ -4,11 +4,11 @@ Each pre-approved supply chain creates a paved road to production. Orchestrating
 
 Out of the box supply chains are provided with Tanzu Application Platform and the following three supply chains are included: 
 
-      Out of the Box Supply Chain Basic
+     - Out of the Box Supply Chain Basic
       
-      Out of the Box Supply Chain with Testing
+     - Out of the Box Supply Chain with Testing
       
-      Out of the Box Supply Chain with Testing and Scanning
+     - Out of the Box Supply Chain with Testing and Scanning
       
 TAP also includes Out of the Box Templates and Out of the Box Delivery Basic. 
 
@@ -19,7 +19,7 @@ file: ~/tap-values.yaml
 line: 14
 ```
 
-<p style="color:blue"><strong> List the supply chain list </strong></p>
+<p style="color:blue"><strong> List the supply chains </strong></p>
 
 ```execute
 tanzu apps cluster-supply-chain list
