@@ -39,10 +39,10 @@ cd /home/eduk8s/tanzudocs/site-component && ls
 #npx @techdocs/cli generate --source-dir /home/eduk8s/tanzudocs/blank  --output-dir /home/eduk8s/tanzudocs/site-component
 ```
 
-**Note:** For this workshop, we have already generated the required files into: **/home/eduk8s/tanzudocs/site-component**
+**Note:** For this workshop, we have already generated and published the required files into: **/home/eduk8s/tanzudocs/site-component**
 
 ```execute
-npx @techdocs/cli publish --publisher-type azureBlobStorage --storage-name {{ session_namespace }} --azureAccountName taptechdocsblob --azureAccountKey OCOHumPLlSDkwawWLPWd1BvBsV77Lib95Dh5xuiIFfBz4kwHSVPLnaeEVUIJQJolAYzvPa29/RYG+AStDcv2Gg== --entity default/Component/tap-gui-component --directory /home/eduk8s/tanzudocs/site-component
+#npx @techdocs/cli publish --publisher-type azureBlobStorage --storage-name {{ session_namespace }} --azureAccountName taptechdocsblob --azureAccountKey OCOHumPLlSDkwawWLPWd1BvBsV77Lib95Dh5xuiIFfBz4kwHSVPLnaeEVUIJQJolAYzvPa29/RYG+AStDcv2Gg== --entity default/Component/tap-gui-component --directory /home/eduk8s/tanzudocs/site-component
 ```
 
 Expected output: 
