@@ -28,7 +28,7 @@ modules:
         exit_sign: Accelerators
     exercises/08-accelerators:
         name: Create an accelerator
-        exit_sign: update app
+        exit_sign: Scan Test
     exercises/09-Test-scan:
         name: Scan Test
         exit_sign: API
