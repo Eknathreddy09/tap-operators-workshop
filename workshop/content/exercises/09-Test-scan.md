@@ -8,7 +8,7 @@ Edit scanpolicy and Add "Critical" to notAllowedSeverities list:
 
 ```editor:open-file
 file: /home/eduk8s/scanpolicy.yaml
-line: 16
+line: 17
 ```
 
 ref Image: ![Scanpolicy](images/scanpolicy-1.png)
@@ -43,7 +43,7 @@ ref Image: ![Scanpolicy](images/scan-1.png)
 
 ```editor:open-file
 file: /home/eduk8s/scanpolicy.yaml
-line: 17
+line: 18
 ```
 
 Add the CVE **GHSA-36p3-wjmg-h94x** to ignoreCves list as shown in below image: 
@@ -70,7 +70,7 @@ Add the CVE **CVE-2022-22965** to ignoreCves list as shown in below image:
 
 ```editor:open-file
 file: /home/eduk8s/scanpolicy.yaml
-line: 17
+line: 18
 ```
 
 ref Image: ![Scanpolicy](images/scan-4.png)
