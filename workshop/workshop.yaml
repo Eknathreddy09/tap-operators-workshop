@@ -16,5 +16,6 @@ modules:
     - exercises/10-APIDocs
     - exercises/11-metadatastore
     - exercises/12-TechDocs
-    - exercises/13-Cleanup
+    - exercises/13-security-analysis
+    - exercises/14-Cleanup
     - workshop-summary
