@@ -40,10 +40,13 @@ modules:
         exit_sign: Tech Docs
     exercises/12-TechDocs:
         name: Tech Docs
+        exit_sign: Security Analysis
+    exercises/13-security-analysis:
+        name: Security Analysis
         exit_sign: Cleanup
-    exercises/13-Cleanup:
+    exercises/14-Cleanup:
         name: Cleanup
-        exit_sign: Next
+        exit_sign: Next    
     workshop-summary:
         name: Workshop Summary
         exit_sign: Finish Workshop
