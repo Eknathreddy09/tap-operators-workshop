@@ -1,25 +1,109 @@
-apiVersion: training.eduk8s.io/v1alpha2
+# #@ load("@ytt:data", "data")
+---
+apiVersion: learningcenter.tanzu.vmware.com/v1beta1
 kind: Workshop
 metadata:
-  name: tap-mc-workshop
+  name: tapworkshop-developers
 spec:
-  title: Partner Demo Workshop - TAP Multi cluster
-  description: Workshop created to demo TAP 1.1.0 Multi cluster setup
-  vendor: eduk8s.io
+  title: TAP Workshop - Developers
+  description: An introduction to the Tanzu Application Platform for Application Developers
+  vendor: vmware.com
   difficulty: beginner
-  duration: 15m
-  url: https://github.com/Eknathreddy09/tap-mc-demo
+  duration: 100m
+  url: https://github.com/Tanzu-Partner-SE/TAP-WORKSHOP-DEVELOPERS
   content:
-     files: github.com/Eknathreddy09/tap-mc-demo?ref=main
-     image: 
+    image: tanzupartnerworkshop.azurecr.io/tapworkshop:v4
+    files: https://<githubtoken>:x-oauth-basic@github.com/Tanzu-Partner-SE/TAP-WORKSHOP-DEVELOPERS/tarball/main?path=--anchored
   session:
+    resources:
+      memory: 3Gi
+    env:
+      # - name: GITEA_PASSWORD
+      #   value: #@ data.values.gitea.adminPassword
+      - name: VIEW_CLUSTER_DOMAIN
+        value: workshop.tap.tanzupartnerdemo.com
+      - name: TAP_REGISTRY_HOST
+        value: tanzupartnerworkshop.azurecr.io
+      - name: ACC_SERVER_URL
+        value: https://accelerator.workshop.tap.tanzupartnerdemo.com
+      # - name: HARBOR_USER
+      #   value: #@ data.values.harbor.user
+      # - name: HARBOR_PASSWORD
+      #   value: #@ data.values.harbor.adminPassword
     namespaces:
-      budget: small
+      budget: custom
     applications:
       terminal:
         enabled: true
         layout: split
       console:
         enabled: true
+        vendor: octant
       editor:
         enabled: true
+      registry:
+        enabled: false
+#    objects:
+#       # Permissions for workshop
+#      - apiVersion: rbac.authorization.k8s.io/v1
+#        kind: ClusterRoleBinding
+#        metadata:
+#          name: $(session_namespace)-workshop-read-crb
+#          namespace: $(session_namespace)
+#        roleRef:
+#          apiGroup: rbac.authorization.k8s.io
+#          kind: ClusterRole
+#          name: k8s-reader
+#        subjects:
+#          - kind: ServiceAccount
+#            namespace: $(workshop_namespace)
+#            name: $(service_account)
+#      - apiVersion: rbac.authorization.k8s.io/v1
+#        kind: ClusterRoleBinding
+#        metadata:
+#          name: $(session_namespace)-workshop-rw-crb
+#          namespace: $(session_namespace)
+#        roleRef:
+#          apiGroup: rbac.authorization.k8s.io
+#          kind: ClusterRole
+#          name: workshop-cluster-role
+#        subjects:
+#          - kind: ServiceAccount
+#            namespace: $(workshop_namespace)
+#            name: $(service_account)
+#      # Permissions for session user
+#      - apiVersion: rbac.authorization.k8s.io/v1
+#        kind: ClusterRoleBinding
+#        metadata:
+#          name: $(session_namespace)-session-read-crb
+#          namespace: $(session_namespace)
+#        roleRef:
+#          apiGroup: rbac.authorization.k8s.io
+#          kind: ClusterRole
+#          name: k8s-reader
+#        subjects:
+#          - kind: ServiceAccount
+#            namespace: $(session_namespace)
+#            name: default
+#      - apiVersion: rbac.authorization.k8s.io/v1
+#        kind: ClusterRoleBinding
+#        metadata:
+#          name: $(session_namespace)-session-rw-crb
+#          namespace: $(session_namespace)
+#        roleRef:
+#          apiGroup: rbac.authorization.k8s.io
+#          kind: ClusterRole
+#          name: workshop-cluster-role
+#        subjects:
+#          - kind: ServiceAccount
+#            namespace: $(session_namespace)
+#            name: default
+#            #   - apiVersion: v1
+#            # kind: LimitRange
+            #metadata:
+            # name: resource-limits
+            # spec:
+            # limits:
+            #- type: PersistentVolumeClaim
+            # max:
+            # storage: 10Gi
