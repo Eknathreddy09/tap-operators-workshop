@@ -1,23 +1,28 @@
-apiVersion: training.eduk8s.io/v1alpha1
+apiVersion: learningcenter.tanzu.vmware.com/v1beta1
 kind: TrainingPortal
 metadata:
-  name: partnerse
+  name: partnerworkshop-evoila
+  annotations:
+    kapp.k14s.io/update-strategy: always-replace
 spec:
   portal:
-    ingress:
-      domain: workshop.captainvirtualization.in
+    title: Tanzu Application Platform Demos
+    password: tapworkshop1!
     registration:
       type: anonymous
-    credentials:
-      admin:
-        username: admin
-        password: Welcome11!
+      enabled: true
+    updates:
+      workshop: true
+    sessions:
+      maximum: 45
   workshops:
-  - name: tap-workshop
-    capacity: 25
-    expires: 300m
-    orphaned: 45m
-  - name: tap-mc-workshop
-    capacity: 25
-    expires: 300m
-    orphaned: 45m
+    - name: tapworkshop-developers
+      expires: 360m
+      orphaned: 120m
+      capacity: 45
+      reserved: 2
+    - name: tapworkshop-operators
+      expires: 360m
+      orphaned: 120m
+      capacity: 20
+      reserved: 1
