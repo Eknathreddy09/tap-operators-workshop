@@ -8,9 +8,9 @@ spec:
   vendor: eduk8s.io
   difficulty: beginner
   duration: 15m
-  url: https://github.com/Eknathreddy09/tap-demo
+  url: https://github.com/Tanzu-Partner-SE/TAP-WORKSHOP-OPERATORS
   content:
-     files: "https://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:x-oauth-basic@github.com/Eknathreddy09/tap-demo/tarball/main?path=--anchored"
+     files: "https://<githubtoken>:x-oauth-basic@github.com/Tanzu-Partner-SE/TAP-WORKSHOP-OPERATORS/tarball/main?path=--anchored"
      image: tanzupartnerworkshop.azurecr.io/tapworkshopimageoperators:v11
   session:
     namespaces:
