@@ -1,17 +1,17 @@
-apiVersion: training.eduk8s.io/v1alpha2
+apiVersion: learningcenter.tanzu.vmware.com/v1beta1
 kind: Workshop
 metadata:
-  name: tap-workshop
+  name: tapworkshop-operators
 spec:
-  title: Partner Demo Workshop - TAP
-  description: Workshop created to demo TAP 1.1.0
+  title: TAP Workshop - Operators
+  description: An introduction to the Tanzu Application Platform for Operators
   vendor: eduk8s.io
   difficulty: beginner
   duration: 15m
   url: https://github.com/Eknathreddy09/tap-demo
   content:
-     files: github.com/Eknathreddy09/tap-demo?ref=main
-     image: 
+     files: "https://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:x-oauth-basic@github.com/Eknathreddy09/tap-demo/tarball/main?path=--anchored"
+     image: tanzupartnerworkshop.azurecr.io/tapworkshopimageoperators:v11
   session:
     namespaces:
       budget: small
