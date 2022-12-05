@@ -123,7 +123,7 @@ sudo tanzu apps workload list -n tap-install
 Note: Image is already created for this workshop and uploaded to ACR. 
 
 ```execute
-tanzu apps workload create {{ session_namespace }}-fromimage --image tappartnerdemoacr.azurecr.io/tap13/workshopimage/partnertapdemo-tap-install:latest --type web --app {{ session_namespace }}-fromimage -n tap-install -y
+tanzu apps workload create {{ session_namespace }}-fromimage --image tapworkshopoperators.azurecr.io/tap13/workshopimage/partnertapdemo-tap-install:latest --type web --app {{ session_namespace }}-fromimage -n tap-install -y
 ```
 
 ```execute
