@@ -64,7 +64,7 @@ az aks get-credentials --resource-group tapdemo-cluster-RG --name {{ session_nam
 <p style="color:blue"><strong> Docker login to image repo </strong></p>
 
 ```execute
-docker login tappartnerdemoacr.azurecr.io -u tappartnerdemoacr -p $DOCKER_REGISTRY_PASSWORD
+docker login tapworkshopoperators.azurecr.io -u tapworkshopoperators -p $DOCKER_REGISTRY_PASSWORD
 ```
 
 <p style="color:blue"><strong> Check if the current context is set to "{{ session_namespace }}-cluster" </strong></p>
@@ -121,13 +121,13 @@ cd $HOME/tanzu-cluster-essentials
 <p style="color:blue"><strong> Create tap-registry secret </strong></p>
 
 ```execute
-sudo tanzu secret registry add tap-registry --username tappartnerdemoacr --password $DOCKER_REGISTRY_PASSWORD --server tappartnerdemoacr.azurecr.io --export-to-all-namespaces --yes --namespace tap-install
+sudo tanzu secret registry add tap-registry --username tapworkshopoperators --password $DOCKER_REGISTRY_PASSWORD --server tapworkshopoperators.azurecr.io --export-to-all-namespaces --yes --namespace tap-install
 ```
 
 ![Secret Tap Registry](images/prepare-4.png)
 
 ```execute
-kubectl create secret docker-registry registry-credentials --docker-server=tappartnerdemoacr.azurecr.io --docker-username=tappartnerdemoacr --docker-password=$DOCKER_REGISTRY_PASSWORD -n tap-install
+kubectl create secret docker-registry registry-credentials --docker-server=tapworkshopoperators.azurecr.io --docker-username=tapworkshopoperators --docker-password=$DOCKER_REGISTRY_PASSWORD -n tap-install
 ```
 
 ![Secret Registry Credentials](images/prepare-5.png)
