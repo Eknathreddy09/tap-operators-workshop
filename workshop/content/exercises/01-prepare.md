@@ -56,7 +56,7 @@ export DOCKER_REGISTRY_PASSWORD=54L+UsNt1TaHNBNdkMWdAbbPjgKdi16q
 ###### Create Kubernetes cluster with 3 nodes and it should take around 5-10 mins to complete, please wait for it to deploy successfully. 
  
 ```execute
-az aks create --resource-group tapdemo-cluster-RG --name {{ session_namespace }}-cluster --subscription $subscription --node-count 3 --enable-addons monitoring --generate-ssh-keys --node-vm-size Standard_B8ms -z 1 --enable-cluster-autoscaler --min-count 3 --max-count 3
+az aks create --resource-group tapdemo-cluster-RG --name {{ session_namespace }}-cluster --subscription a3ac57b4-348f-471f-9938-9cf757e2d033 --node-count 3 --enable-addons monitoring --generate-ssh-keys --node-vm-size Standard_B8ms -z 1 --enable-cluster-autoscaler --min-count 3 --max-count 3
 ```
 
 <p style="color:blue"><strong> Get credentials of cluster"{{ session_namespace }}-cluster" </strong></p>
