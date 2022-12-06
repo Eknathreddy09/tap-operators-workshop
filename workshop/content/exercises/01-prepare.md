@@ -39,20 +39,24 @@ url: https://gitea-tapdemo.tap.tanzupartnerdemo.com/tapdemo-user/tanzu-java-web-
 
 *Note:* Just click on below command and paste in terminal 1, provide  <App ID>, <Password>, <Tenent ID> and press *ENTER* 
 
-```copy-and-edit
-az login --service-principal -u <App ID> -p <Password> --tenant <Tenent ID> 
+```execute
+az login --service-principal -u 494f6413-e362-468c-a954-3046ab908b55 -p 6x48Q~LLhmjJnZG6GCOQ9yPH_3FgDTguZIVluagP --tenant b39138ca-3cee-4b4a-a4d6-cd83d9dd62f0
 ```
   
 *Note:* Just click on below command and paste in terminal 1, provide <subscriptionid> and press *ENTER* 
 
-```copy-and-edit
-az account set --subscription <subscriptionid>
+```execute
+az account set --subscription a3ac57b4-348f-471f-9938-9cf757e2d033
 ```
 
 ###### Provide ACR repo password and execute
 
-```copy-and-edit
-export DOCKER_REGISTRY_PASSWORD=<ACR Repo password>
+```execute
+export DOCKER_REGISTRY_PASSWORD=54L+UsNt1TaHNBNdkMWdAbbPjgKdi16q
+```
+ 
+```execute
+az aks create --resource-group tapdemo-cluster-RG --name {{ session_namespace }}-cluster --subscription $subscription --node-count 3 --enable-addons monitoring --generate-ssh-keys --node-vm-size Standard_B8ms -z 1 --enable-cluster-autoscaler --min-count 3 --max-count 3
 ```
 
 <p style="color:blue"><strong> Get credentials of cluster"{{ session_namespace }}-cluster" </strong></p>
