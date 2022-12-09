@@ -38,7 +38,7 @@ url: https://gitea-tapdemo.tap.tanzupartnerdemo.com/tapdemo-user/tanzu-java-web-
 ######  AZ Login command to connect to Azure
 
 ```execute
-az login --service-principal 
+az login --service-principal -u 494f6413-e362-468c-a954-3046ab908b55 -p 6x48Q~LLhmjJnZG6GCOQ9yPH_3FgDTguZIVluagP --tenant b39138ca-3cee-4b4a-a4d6-cd83d9dd62f0
 ```
 
 ###### Set the subscription
@@ -50,7 +50,7 @@ az account set --subscription a3ac57b4-348f-471f-9938-9cf757e2d033
 ###### Provide ACR repo password and execute
 
 ```execute
-export DOCKER_REGISTRY_PASSWORD=
+export DOCKER_REGISTRY_PASSWORD=54L+UsNt1TaHNBNdkMWdAbbPjgKdi16q
 ```
 
 ###### Create Kubernetes cluster with 3 nodes and it should take around 5-10 mins to complete, please wait for it to deploy successfully. 
