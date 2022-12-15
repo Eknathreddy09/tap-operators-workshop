@@ -61,6 +61,12 @@ sudo tanzu apps workload get {{ session_namespace }} -n tap-install
 sudo tanzu apps workload tail {{ session_namespace }} --since 10m --timestamp -n tap-install
 ```
 
+###### Execute the below Auto heal script
+
+```execute-1
+./autoheal.sh
+```
+
 <p style="color:blue"><strong> Check all the installed applications </strong></p>
 
 ```execute
