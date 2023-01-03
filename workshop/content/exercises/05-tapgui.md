@@ -53,7 +53,7 @@ Example for ref:
 url: https://tap-gui.workshop.tap.tanzupartnerdemo.com/docs/default/component/tap-gui-component/github-settings/
 ```
 
-###### Remove (#) from lines 67 - 73
+###### Remove (#) from lines 69 - 75
 
 ```editor:open-file
 file: ~/tap-values.yaml
@@ -65,14 +65,14 @@ Replace provideyourclientid with your Github client ID.
 
 ```editor:open-file
 file: ~/tap-values.yaml
-line: 72
+line: 74
 ```
 
 Replace provideyourcliensecret with your Github client Secret. 
 
 ```editor:open-file
 file: ~/tap-values.yaml
-line: 73
+line: 75
 ```
 
 ###### Update TAP packages with updated values: 
