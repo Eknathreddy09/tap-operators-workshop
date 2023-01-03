@@ -36,6 +36,8 @@ kubectl apply -f $HOME/scanpolicy.yaml -n tap-install
 sudo tanzu package installed list -A
 ```
 
+###### Execute the below Auto heal script
+
 ```
 source ~/autoheal.sh
 ```
@@ -67,12 +69,6 @@ sudo tanzu apps workload get {{ session_namespace }} -n tap-install
 
 ```execute-2
 sudo tanzu apps workload tail {{ session_namespace }} --since 10m --timestamp -n tap-install
-```
-
-###### Execute the below Auto heal script
-
-```execute-1
-./autoheal.sh
 ```
 
 <p style="color:blue"><strong> Check all the installed applications </strong></p>
