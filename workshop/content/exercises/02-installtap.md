@@ -40,7 +40,7 @@ After successful installation: ![Install](images/install-4.png)
 
 <p style="color:blue"><strong> List the packages installed </strong></p>
 
-```execute
+```execute-2
 sudo tanzu package installed list -A
 ```
 
