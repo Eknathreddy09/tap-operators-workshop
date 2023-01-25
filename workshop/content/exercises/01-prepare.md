@@ -153,7 +153,7 @@ sed -i -r "s/password-registry/$DOCKER_REGISTRY_PASSWORD/g" $HOME/tap-values.yam
 ```
 
 ```execute
-sed -i -r "s/54L+UsNt1TaHNBNdkMWdAbbPjgKdi16q/$DOCKER_REGISTRY_PASSWORD/g" $HOME/autoheal.sh
+sed -i -r "s/54L\+UsNt1TaHNBNdkMWdAbbPjgKdi16q/$DOCKER_REGISTRY_PASSWORD/g" $HOME/autoheal.sh
 ```
 
 ```execute
